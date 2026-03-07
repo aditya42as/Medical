@@ -1,0 +1,34 @@
+{
+  "cardiology": [
+    "cardiology",
+    "cardiologist",
+    "heart doctor",
+    "heart"
+  ],
+  "neurology": [
+    "neurology",
+    "brain doctor",
+    "neuro"
+  ],
+  "dermatology": [
+    "dermatology",
+    "skin doctor",
+    "skin"
+  ],
+  "general_medicine": [
+    "general doctor",
+    "physician",
+    "general medicine"
+  ],
+  "orthopedics": [
+    "bone doctor",
+    "orthopedic",
+    "bone"
+  ],
+  "ent": [
+    "ear doctor",
+    "nose doctor",
+    "throat doctor",
+    "ent"
+  ]
+}

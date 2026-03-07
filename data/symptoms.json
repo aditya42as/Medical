@@ -1,0 +1,49 @@
+{
+  "fever": [
+    "fever",
+    "bukhar",
+    "temperature",
+    "bodyheat",
+    "bodyheat",
+    "high temperature"
+  ],
+  "cough": [
+    "cough",
+    "khansi",
+    "khasi"
+  ],
+  "headache": [
+    "headache",
+    "sar",
+    "sir",
+    "sar dard",
+    "sir dard"
+  ],
+  "breathing_difficulty": [
+    "breath",
+    "breathing",
+    "saans",
+    "saans lene",
+    "saans problem"
+  ],
+  "chest_pain": [
+    "chest",
+    "chest pain",
+    "heart pain"
+  ],
+  "stomach_pain": [
+    "stomach",
+    "pet dard",
+    "stomach pain"
+  ],
+  "vomiting": [
+    "vomit",
+    "vomiting",
+    "ulti"
+  ],
+  "cold": [
+    "cold",
+    "sardi",
+    "runny nose"
+  ]
+}

@@ -1,0 +1,56 @@
+text,intent
+mujhe fever hai,SYMPTOM_REPORT
+mujhe bukhar hai,SYMPTOM_REPORT
+kal se fever ho raha hai,SYMPTOM_REPORT
+mujhe cough ho raha hai,SYMPTOM_REPORT
+khansi ho rahi hai,SYMPTOM_REPORT
+sar me dard hai,SYMPTOM_REPORT
+sir dard kar raha hai,SYMPTOM_REPORT
+mujhe saans lene me dikkat hai,SYMPTOM_REPORT
+saans lene me problem hai,SYMPTOM_REPORT
+chest pain ho raha hai,SYMPTOM_REPORT
+pet me dard hai,SYMPTOM_REPORT
+mujhe ulti ho rahi hai,SYMPTOM_REPORT
+mujhe cold hai,SYMPTOM_REPORT
+mujhe sardi ho gayi hai,SYMPTOM_REPORT
+
+mujhe cardiologist ka appointment chahiye,APPOINTMENT_BOOK
+kal cardiologist appointment book karna hai,APPOINTMENT_BOOK
+doctor ka appointment book karo,APPOINTMENT_BOOK
+mujhe doctor se milna hai,APPOINTMENT_BOOK
+appointment schedule karna hai,APPOINTMENT_BOOK
+kal doctor appointment chahiye,APPOINTMENT_BOOK
+doctor appointment lena hai,APPOINTMENT_BOOK
+
+mera appointment cancel karo,APPOINTMENT_CANCEL
+kal ka appointment cancel karo,APPOINTMENT_CANCEL
+appointment cancel karna hai,APPOINTMENT_CANCEL
+doctor appointment cancel karo,APPOINTMENT_CANCEL
+
+appointment reschedule karna hai,APPOINTMENT_RESCHEDULE
+mera appointment change karo,APPOINTMENT_RESCHEDULE
+doctor appointment dusre time pe kar do,APPOINTMENT_RESCHEDULE
+
+cardiology department kaha hai,DEPARTMENT_QUERY
+neurology department kidhar hai,DEPARTMENT_QUERY
+skin department kaha milega,DEPARTMENT_QUERY
+heart doctor department kaha hai,DEPARTMENT_QUERY
+
+doctor sharma kab available hain,DOCTOR_QUERY
+doctor kab milenge,DOCTOR_QUERY
+doctor ka timing kya hai,DOCTOR_QUERY
+doctor ka schedule kya hai,DOCTOR_QUERY
+
+hello,GREETING
+hi,GREETING
+good morning,GREETING
+good evening,GREETING
+namaste,GREETING
+
+thank you,GENERAL_QUERY
+shukriya,GENERAL_QUERY
+ok thanks,GENERAL_QUERY
+
+mujhe samajh nahi aa raha,UNKNOWN
+kuch galat lag raha hai,UNKNOWN
+ye kya hai,UNKNOWN

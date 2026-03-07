@@ -1,0 +1,5 @@
+venv/
+.venv/
+intent_model/
+__pycache__/
+*.pyc
