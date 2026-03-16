@@ -14,6 +14,8 @@ class Aggregator:
         time = None
         bodyPart = None
 
+        max_confidence = 0
+
         for r in results:
 
             intents.add(r["intent"])
@@ -30,18 +32,23 @@ class Aggregator:
             if r["entities"]["duration"]:
                 duration = r["entities"]["duration"]
 
-            if r["entities"]["date"]:
+            if r["entities"].get("date"):
                 date = r["entities"]["date"]
 
-            if r["entities"]["time"]:
+            if r["entities"].get("time"):
                 time = r["entities"]["time"]
 
             if r["entities"]["bodyPart"]:
                 bodyPart = r["entities"]["bodyPart"]
 
+            if r["confidence"] > max_confidence:
+                max_confidence = r["confidence"]
+
         output = {
 
-            "intents": list(intents),
+            "intent": list(intents),
+
+            "confidence": max_confidence,
 
             "entities": {
 

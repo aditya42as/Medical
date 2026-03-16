@@ -1,5 +1,6 @@
 import pandas as pd
 import torch
+import joblib
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import Trainer, TrainingArguments
 from sklearn.preprocessing import LabelEncoder
@@ -76,7 +77,6 @@ def train():
     model.save_pretrained(MODEL_SAVE_PATH)
     tokenizer.save_pretrained(MODEL_SAVE_PATH)
 
-    import joblib
     joblib.dump(encoder, MODEL_SAVE_PATH + "/label_encoder.pkl")
 
 

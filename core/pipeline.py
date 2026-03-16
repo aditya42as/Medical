@@ -1,9 +1,12 @@
+import uuid
+
 from NLP.preprocessing import Preprocessor
 from NLP.splitter import SentenceSplit
 from NLP.infoExtract import InfoExtractor
 from model.intent import IntentDetection
+from NLP.summary_generator import SummaryGenerator
 from core.aggregator import Aggregator
-from core.logger import NLogger
+from config.settings import CONFIDENCE_THRESHOLD, CASE_PREFIX
 
 
 class NPipeline:
@@ -11,18 +14,19 @@ class NPipeline:
     def __init__(self):
 
         self.preprocessor = Preprocessor()
-
         self.splitter = SentenceSplit()
-
         self.extractor = InfoExtractor()
-
         self.intent = IntentDetection()
-
         self.aggregator = Aggregator()
+        self.summarizer = SummaryGenerator()
 
-        self.logger = NLogger()
+    def generate_case_id(self):
+
+        return CASE_PREFIX + str(uuid.uuid4())[:8]
 
     def process(self, text):
+
+        case_id = self.generate_case_id()
 
         cleaned = self.preprocessor.cleanText(text)
 
@@ -36,19 +40,20 @@ class NPipeline:
 
             intentID, confidence = self.intent.predict(sentence)
 
-            result = {
+            if confidence < CONFIDENCE_THRESHOLD:
+                intentID = "UNCERTAIN"
 
+            results.append({
                 "intent": intentID,
-
                 "confidence": confidence,
-
                 "entities": entities
-            }
-
-            results.append(result)
+            })
 
         finalOut = self.aggregator.aggregate(results)
 
-        self.logger.log(text, finalOut)
+        summary = self.summarizer.generate(finalOut["entities"])
+
+        finalOut["case_id"] = case_id
+        finalOut["summary"] = summary
 
         return finalOut
