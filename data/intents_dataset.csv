@@ -1,56 +1,562 @@
 text,intent
-mujhe fever hai,SYMPTOM_REPORT
-mujhe bukhar hai,SYMPTOM_REPORT
-kal se fever ho raha hai,SYMPTOM_REPORT
-mujhe cough ho raha hai,SYMPTOM_REPORT
-khansi ho rahi hai,SYMPTOM_REPORT
-sar me dard hai,SYMPTOM_REPORT
-sir dard kar raha hai,SYMPTOM_REPORT
-mujhe saans lene me dikkat hai,SYMPTOM_REPORT
-saans lene me problem hai,SYMPTOM_REPORT
-chest pain ho raha hai,SYMPTOM_REPORT
-pet me dard hai,SYMPTOM_REPORT
-mujhe ulti ho rahi hai,SYMPTOM_REPORT
-mujhe cold hai,SYMPTOM_REPORT
-mujhe sardi ho gayi hai,SYMPTOM_REPORT
-
-mujhe cardiologist ka appointment chahiye,APPOINTMENT_BOOK
-kal cardiologist appointment book karna hai,APPOINTMENT_BOOK
-doctor ka appointment book karo,APPOINTMENT_BOOK
-mujhe doctor se milna hai,APPOINTMENT_BOOK
-appointment schedule karna hai,APPOINTMENT_BOOK
-kal doctor appointment chahiye,APPOINTMENT_BOOK
-doctor appointment lena hai,APPOINTMENT_BOOK
-
-mera appointment cancel karo,APPOINTMENT_CANCEL
-kal ka appointment cancel karo,APPOINTMENT_CANCEL
-appointment cancel karna hai,APPOINTMENT_CANCEL
-doctor appointment cancel karo,APPOINTMENT_CANCEL
-
-appointment reschedule karna hai,APPOINTMENT_RESCHEDULE
-mera appointment change karo,APPOINTMENT_RESCHEDULE
-doctor appointment dusre time pe kar do,APPOINTMENT_RESCHEDULE
-
-cardiology department kaha hai,DEPARTMENT_QUERY
-neurology department kidhar hai,DEPARTMENT_QUERY
-skin department kaha milega,DEPARTMENT_QUERY
-heart doctor department kaha hai,DEPARTMENT_QUERY
-
-doctor sharma kab available hain,DOCTOR_QUERY
-doctor kab milenge,DOCTOR_QUERY
-doctor ka timing kya hai,DOCTOR_QUERY
-doctor ka schedule kya hai,DOCTOR_QUERY
-
+i feel feverish,SYMPTOM_REPORT
+my temperature feels high,SYMPTOM_REPORT
+i think i have fever,SYMPTOM_REPORT
+fever started this morning,SYMPTOM_REPORT
+body feels very hot,SYMPTOM_REPORT
+i woke up with a fever,SYMPTOM_REPORT
+fever since last night,SYMPTOM_REPORT
+running a mild fever,SYMPTOM_REPORT
+i feel like my body is burning,SYMPTOM_REPORT
+temperature seems elevated,SYMPTOM_REPORT
+i feel warm and weak,SYMPTOM_REPORT
+my body feels overheated,SYMPTOM_REPORT
+i might be running a fever,SYMPTOM_REPORT
+temperature is rising,SYMPTOM_REPORT
+my forehead feels hot,SYMPTOM_REPORT
+my head hurts,SYMPTOM_REPORT
+sharp pain in my head,SYMPTOM_REPORT
+headache since morning,SYMPTOM_REPORT
+my head is aching badly,SYMPTOM_REPORT
+i feel pressure in my head,SYMPTOM_REPORT
+constant headache today,SYMPTOM_REPORT
+head feels heavy,SYMPTOM_REPORT
+throbbing headache,SYMPTOM_REPORT
+pain around my temples,SYMPTOM_REPORT
+head pain getting worse,SYMPTOM_REPORT
+headache all day,SYMPTOM_REPORT
+pressure behind my eyes,SYMPTOM_REPORT
+pain spreading across head,SYMPTOM_REPORT
+i keep coughing,SYMPTOM_REPORT
+persistent cough today,SYMPTOM_REPORT
+dry cough since yesterday,SYMPTOM_REPORT
+cough with throat irritation,SYMPTOM_REPORT
+bad cough all night,SYMPTOM_REPORT
+cough is not stopping,SYMPTOM_REPORT
+coughing repeatedly,SYMPTOM_REPORT
+chest feels tight when coughing,SYMPTOM_REPORT
+my throat makes me cough,SYMPTOM_REPORT
+cough getting stronger,SYMPTOM_REPORT
+continuous cough,SYMPTOM_REPORT
+cough started suddenly,SYMPTOM_REPORT
+breathing feels difficult,SYMPTOM_REPORT
+shortness of breath today,SYMPTOM_REPORT
+i feel breathless,SYMPTOM_REPORT
+breathing problem started today,SYMPTOM_REPORT
+air feels hard to inhale,SYMPTOM_REPORT
+cant breathe deeply,SYMPTOM_REPORT
+breathing feels heavy,SYMPTOM_REPORT
+difficulty breathing while walking,SYMPTOM_REPORT
+lungs feel tight,SYMPTOM_REPORT
+breath feels short,SYMPTOM_REPORT
+breathing discomfort,SYMPTOM_REPORT
+i feel like i cannot get enough air,SYMPTOM_REPORT
+pain in my chest,SYMPTOM_REPORT
+sharp chest pain,SYMPTOM_REPORT
+chest feels heavy,SYMPTOM_REPORT
+pressure in chest area,SYMPTOM_REPORT
+pain while breathing in chest,SYMPTOM_REPORT
+burning chest pain,SYMPTOM_REPORT
+tightness in my chest,SYMPTOM_REPORT
+sudden chest discomfort,SYMPTOM_REPORT
+pain around heart area,SYMPTOM_REPORT
+chest pain while coughing,SYMPTOM_REPORT
+chest pressure feeling,SYMPTOM_REPORT
+stomach hurts,SYMPTOM_REPORT
+pain in stomach area,SYMPTOM_REPORT
+abdominal pain today,SYMPTOM_REPORT
+stomach cramps started,SYMPTOM_REPORT
+stomach pain after food,SYMPTOM_REPORT
+sharp pain in stomach,SYMPTOM_REPORT
+lower stomach pain,SYMPTOM_REPORT
+my stomach feels upset,SYMPTOM_REPORT
+stomach discomfort all day,SYMPTOM_REPORT
+belly pain today,SYMPTOM_REPORT
+digestive pain,SYMPTOM_REPORT
+abdominal discomfort,SYMPTOM_REPORT
+i feel like vomiting,SYMPTOM_REPORT
+vomiting multiple times,SYMPTOM_REPORT
+nausea since morning,SYMPTOM_REPORT
+feeling nauseous,SYMPTOM_REPORT
+threw up earlier,SYMPTOM_REPORT
+constant nausea feeling,SYMPTOM_REPORT
+vomiting after eating,SYMPTOM_REPORT
+stomach nausea today,SYMPTOM_REPORT
+feeling sick to stomach,SYMPTOM_REPORT
+vomiting again today,SYMPTOM_REPORT
+runny nose today,SYMPTOM_REPORT
+nose feels blocked,SYMPTOM_REPORT
+cold symptoms,SYMPTOM_REPORT
+sneezing and cold,SYMPTOM_REPORT
+blocked nose and cold,SYMPTOM_REPORT
+cold with runny nose,SYMPTOM_REPORT
+nose congestion today,SYMPTOM_REPORT
+heavy cold symptoms,SYMPTOM_REPORT
+sneezing repeatedly,SYMPTOM_REPORT
+cold feeling since yesterday,SYMPTOM_REPORT
+body feels weak,SYMPTOM_REPORT
+extreme fatigue today,SYMPTOM_REPORT
+i feel exhausted,SYMPTOM_REPORT
+energy feels very low,SYMPTOM_REPORT
+body weakness today,SYMPTOM_REPORT
+tired all day,SYMPTOM_REPORT
+fatigue since morning,SYMPTOM_REPORT
+very low energy,SYMPTOM_REPORT
+feeling drained,SYMPTOM_REPORT
+body feels extremely tired,SYMPTOM_REPORT
+i feel dizzy,SYMPTOM_REPORT
+lightheaded today,SYMPTOM_REPORT
+sudden dizziness,SYMPTOM_REPORT
+room feels spinning,SYMPTOM_REPORT
+dizziness when standing,SYMPTOM_REPORT
+head spinning feeling,SYMPTOM_REPORT
+feeling faint,SYMPTOM_REPORT
+balance feels off,SYMPTOM_REPORT
+i feel unstable,SYMPTOM_REPORT
+mild dizziness,SYMPTOM_REPORT
+fever and cough together,SYMPTOM_REPORT
+headache with fever,SYMPTOM_REPORT
+cough and chest pain,SYMPTOM_REPORT
+cold with headache,SYMPTOM_REPORT
+stomach pain and nausea,SYMPTOM_REPORT
+breathing problem with chest pain,SYMPTOM_REPORT
+cough and sore throat,SYMPTOM_REPORT
+fever and body ache,SYMPTOM_REPORT
+nausea with stomach pain,SYMPTOM_REPORT
+cough with breathing difficulty,SYMPTOM_REPORT
+i need to book doctor appointment,APPOINTMENT_BOOK
+book an appointment,APPOINTMENT_BOOK
+i want to see a doctor,APPOINTMENT_BOOK
+schedule doctor consultation,APPOINTMENT_BOOK
+book hospital appointment,APPOINTMENT_BOOK
+i want a doctor visit,APPOINTMENT_BOOK
+schedule appointment tomorrow,APPOINTMENT_BOOK
+book doctor visit today,APPOINTMENT_BOOK
+i need a consultation,APPOINTMENT_BOOK
+set up doctor appointment,APPOINTMENT_BOOK
+book appointment with cardiologist,APPOINTMENT_BOOK
+schedule cardiology visit,APPOINTMENT_BOOK
+i want heart doctor appointment,APPOINTMENT_BOOK
+book neurologist consultation,APPOINTMENT_BOOK
+schedule dermatology visit,APPOINTMENT_BOOK
+i want skin doctor appointment,APPOINTMENT_BOOK
+schedule neurologist appointment,APPOINTMENT_BOOK
+book hospital consultation,APPOINTMENT_BOOK
+arrange doctor visit,APPOINTMENT_BOOK
+doctor consultation tomorrow,APPOINTMENT_BOOK
+cancel my appointment,APPOINTMENT_CANCEL
+please cancel doctor appointment,APPOINTMENT_CANCEL
+i need to cancel my booking,APPOINTMENT_CANCEL
+cancel tomorrow visit,APPOINTMENT_CANCEL
+cancel scheduled appointment,APPOINTMENT_CANCEL
+i want to cancel consultation,APPOINTMENT_CANCEL
+remove my doctor visit,APPOINTMENT_CANCEL
+cancel hospital appointment,APPOINTMENT_CANCEL
+i cannot attend appointment,APPOINTMENT_CANCEL
+cancel my visit please,APPOINTMENT_CANCEL
+change my appointment time,APPOINTMENT_RESCHEDULE
+move my doctor visit,APPOINTMENT_RESCHEDULE
+reschedule appointment,APPOINTMENT_RESCHEDULE
+shift consultation time,APPOINTMENT_RESCHEDULE
+move appointment to tomorrow,APPOINTMENT_RESCHEDULE
+change visit timing,APPOINTMENT_RESCHEDULE
+reschedule hospital appointment,APPOINTMENT_RESCHEDULE
+shift appointment to later,APPOINTMENT_RESCHEDULE
+change appointment slot,APPOINTMENT_RESCHEDULE
+reschedule doctor visit,APPOINTMENT_RESCHEDULE
+where is cardiology department,DEPARTMENT_QUERY
+where can i find heart doctor department,DEPARTMENT_QUERY
+location of cardiology,DEPARTMENT_QUERY
+where is neurology department,DEPARTMENT_QUERY
+where is skin department,DEPARTMENT_QUERY
+where can i find dermatologist,DEPARTMENT_QUERY
+where is neuro section,DEPARTMENT_QUERY
+cardiology department location,DEPARTMENT_QUERY
+where is dermatology clinic,DEPARTMENT_QUERY
+which floor is cardiology,DEPARTMENT_QUERY
+doctor availability today,DOCTOR_QUERY
+when can doctor see patients,DOCTOR_QUERY
+doctor schedule today,DOCTOR_QUERY
+doctor timing today,DOCTOR_QUERY
+what time doctor comes,DOCTOR_QUERY
+doctor working hours,DOCTOR_QUERY
+when doctor available,DOCTOR_QUERY
+doctor consultation time,DOCTOR_QUERY
+is doctor available,DOCTOR_QUERY
+doctor visiting hours,DOCTOR_QUERY
 hello,GREETING
 hi,GREETING
+hey,GREETING
 good morning,GREETING
 good evening,GREETING
-namaste,GREETING
-
+hi doctor,GREETING
+hello hospital assistant,GREETING
+thanks,GENERAL_QUERY
 thank you,GENERAL_QUERY
-shukriya,GENERAL_QUERY
+thanks a lot,GENERAL_QUERY
+appreciate your help,GENERAL_QUERY
 ok thanks,GENERAL_QUERY
-
-mujhe samajh nahi aa raha,UNKNOWN
-kuch galat lag raha hai,UNKNOWN
-ye kya hai,UNKNOWN
+i dont understand,UNKNOWN
+this seems confusing,UNKNOWN
+something is wrong here,UNKNOWN
+what does this mean,UNKNOWN
+this does not make sense,UNKNOWN
+i suddenly started feeling feverish,SYMPTOM_REPORT
+my body temperature feels unusually high,SYMPTOM_REPORT
+i think my fever is getting worse,SYMPTOM_REPORT
+fever symptoms appeared today,SYMPTOM_REPORT
+i feel chills and fever,SYMPTOM_REPORT
+my body feels extremely warm,SYMPTOM_REPORT
+temperature feels higher than normal,SYMPTOM_REPORT
+fever started after waking up,SYMPTOM_REPORT
+i have mild fever symptoms,SYMPTOM_REPORT
+my forehead feels very warm,SYMPTOM_REPORT
+my head has been aching,SYMPTOM_REPORT
+headache started suddenly,SYMPTOM_REPORT
+my head feels heavy today,SYMPTOM_REPORT
+pain spreading across my head,SYMPTOM_REPORT
+my head feels like it is pounding,SYMPTOM_REPORT
+i have headache since yesterday,SYMPTOM_REPORT
+sharp headache right now,SYMPTOM_REPORT
+pressure building in my head,SYMPTOM_REPORT
+my temples are hurting,SYMPTOM_REPORT
+my head feels tight,SYMPTOM_REPORT
+i keep coughing nonstop,SYMPTOM_REPORT
+cough started this morning,SYMPTOM_REPORT
+my cough is getting worse,SYMPTOM_REPORT
+i have dry cough today,SYMPTOM_REPORT
+cough with irritation in throat,SYMPTOM_REPORT
+continuous coughing today,SYMPTOM_REPORT
+cough feels painful,SYMPTOM_REPORT
+i have severe coughing,SYMPTOM_REPORT
+coughing fits today,SYMPTOM_REPORT
+my chest hurts when i cough,SYMPTOM_REPORT
+breathing feels restricted,SYMPTOM_REPORT
+i feel short of breath,SYMPTOM_REPORT
+breathing difficulty while walking,SYMPTOM_REPORT
+i cannot breathe comfortably,SYMPTOM_REPORT
+breathing feels strained,SYMPTOM_REPORT
+lungs feel tight,SYMPTOM_REPORT
+i feel like i am gasping for air,SYMPTOM_REPORT
+breathing issue started today,SYMPTOM_REPORT
+deep breathing feels painful,SYMPTOM_REPORT
+my breathing is shallow,SYMPTOM_REPORT
+pain in chest while inhaling,SYMPTOM_REPORT
+sharp pain near chest,SYMPTOM_REPORT
+chest discomfort today,SYMPTOM_REPORT
+chest pain when moving,SYMPTOM_REPORT
+burning sensation in chest,SYMPTOM_REPORT
+tight chest feeling,SYMPTOM_REPORT
+chest pain after coughing,SYMPTOM_REPORT
+chest pressure today,SYMPTOM_REPORT
+pain spreading across chest,SYMPTOM_REPORT
+my chest feels sore,SYMPTOM_REPORT
+my stomach feels sore,SYMPTOM_REPORT
+pain in lower abdomen,SYMPTOM_REPORT
+stomach pain after meals,SYMPTOM_REPORT
+sharp abdominal pain,SYMPTOM_REPORT
+belly pain getting worse,SYMPTOM_REPORT
+pain around stomach,SYMPTOM_REPORT
+stomach discomfort today,SYMPTOM_REPORT
+abdominal cramps today,SYMPTOM_REPORT
+digestive pain started today,SYMPTOM_REPORT
+pain in belly area,SYMPTOM_REPORT
+vomited earlier today,SYMPTOM_REPORT
+vomiting repeatedly,SYMPTOM_REPORT
+nausea getting worse,SYMPTOM_REPORT
+stomach feels nauseated,SYMPTOM_REPORT
+i feel like throwing up again,SYMPTOM_REPORT
+nausea after eating,SYMPTOM_REPORT
+vomiting since morning,SYMPTOM_REPORT
+constant nausea feeling,SYMPTOM_REPORT
+stomach sickness today,SYMPTOM_REPORT
+i feel sick in my stomach,SYMPTOM_REPORT
+runny nose started today,SYMPTOM_REPORT
+nose feels congested,SYMPTOM_REPORT
+cold symptoms worsening,SYMPTOM_REPORT
+blocked sinuses today,SYMPTOM_REPORT
+runny nose and sneezing,SYMPTOM_REPORT
+nose feels stuffed,SYMPTOM_REPORT
+sinus congestion today,SYMPTOM_REPORT
+cold making me sneeze,SYMPTOM_REPORT
+nasal congestion since morning,SYMPTOM_REPORT
+heavy cold symptoms today,SYMPTOM_REPORT
+my body feels exhausted,SYMPTOM_REPORT
+fatigue making me weak,SYMPTOM_REPORT
+i feel drained today,SYMPTOM_REPORT
+low energy since morning,SYMPTOM_REPORT
+extreme tiredness today,SYMPTOM_REPORT
+body feels very weak,SYMPTOM_REPORT
+i feel fatigued,SYMPTOM_REPORT
+energy levels are very low,SYMPTOM_REPORT
+feeling worn out,SYMPTOM_REPORT
+complete body fatigue,SYMPTOM_REPORT
+sudden dizziness today,SYMPTOM_REPORT
+i feel lightheaded,SYMPTOM_REPORT
+balance feels unstable,SYMPTOM_REPORT
+head spinning today,SYMPTOM_REPORT
+dizziness while walking,SYMPTOM_REPORT
+room spinning sensation,SYMPTOM_REPORT
+feeling faint today,SYMPTOM_REPORT
+dizzy when standing up,SYMPTOM_REPORT
+mild dizziness now,SYMPTOM_REPORT
+sudden dizzy spell,SYMPTOM_REPORT
+fever along with cough,SYMPTOM_REPORT
+cough together with headache,SYMPTOM_REPORT
+cold together with headache,SYMPTOM_REPORT
+fever and chills,SYMPTOM_REPORT
+stomach pain along with nausea,SYMPTOM_REPORT
+breathing problem and cough,SYMPTOM_REPORT
+chest pain and breathing issue,SYMPTOM_REPORT
+headache and nausea,SYMPTOM_REPORT
+cold and throat irritation,SYMPTOM_REPORT
+vomiting with stomach pain,SYMPTOM_REPORT
+i want to book a doctor appointment,APPOINTMENT_BOOK
+please schedule a doctor visit,APPOINTMENT_BOOK
+book an appointment for tomorrow,APPOINTMENT_BOOK
+i need to see a doctor soon,APPOINTMENT_BOOK
+schedule a medical appointment,APPOINTMENT_BOOK
+i would like to book a consultation,APPOINTMENT_BOOK
+arrange a doctor consultation,APPOINTMENT_BOOK
+i want to meet a physician,APPOINTMENT_BOOK
+please book doctor consultation,APPOINTMENT_BOOK
+book appointment for checkup,APPOINTMENT_BOOK
+i need cardiologist appointment,APPOINTMENT_BOOK
+schedule neurologist consultation,APPOINTMENT_BOOK
+book dermatologist appointment,APPOINTMENT_BOOK
+arrange heart specialist visit,APPOINTMENT_BOOK
+book skin doctor appointment,APPOINTMENT_BOOK
+schedule hospital consultation tomorrow,APPOINTMENT_BOOK
+book general physician appointment,APPOINTMENT_BOOK
+i want doctor checkup appointment,APPOINTMENT_BOOK
+please book doctor checkup,APPOINTMENT_BOOK
+book appointment with specialist,APPOINTMENT_BOOK
+cancel my scheduled appointment,APPOINTMENT_CANCEL
+please cancel my booking,APPOINTMENT_CANCEL
+i need to cancel appointment tomorrow,APPOINTMENT_CANCEL
+cancel hospital consultation,APPOINTMENT_CANCEL
+remove my doctor booking,APPOINTMENT_CANCEL
+cancel upcoming appointment,APPOINTMENT_CANCEL
+cancel doctor consultation today,APPOINTMENT_CANCEL
+please cancel visit with doctor,APPOINTMENT_CANCEL
+cancel appointment immediately,APPOINTMENT_CANCEL
+cancel doctor checkup,SYMPTOM_REPORT
+reschedule my appointment,SYMPTOM_REPORT
+move my appointment to another day,SYMPTOM_REPORT
+change doctor appointment timing,SYMPTOM_REPORT
+shift appointment to tomorrow,SYMPTOM_REPORT
+i want to change appointment date,SYMPTOM_REPORT
+reschedule doctor consultation,SYMPTOM_REPORT
+shift appointment later,SYMPTOM_REPORT
+change my visit time,SYMPTOM_REPORT
+reschedule hospital visit,SYMPTOM_REPORT
+where is cardiology clinic,DEPARTMENT_QUERY
+where is heart department located,DEPARTMENT_QUERY
+where can i find neurology department,DEPARTMENT_QUERY
+location of dermatology department,DEPARTMENT_QUERY
+where is skin clinic,DEPARTMENT_QUERY
+which floor has cardiology,SYMPTOM_REPORT
+where is neuro clinic,SYMPTOM_REPORT
+where can i find heart specialist,SYMPTOM_REPORT
+location of neurology,SYMPTOM_REPORT
+where is dermatology section,SYMPTOM_REPORT
+when is doctor available today,DOCTOR_QUERY
+doctor availability tomorrow,DOCTOR_QUERY
+what are doctor timings,DOCTOR_QUERY
+when can i meet doctor,SYMPTOM_REPORT
+doctor working schedule,DOCTOR_QUERY
+doctor consultation hours,DOCTOR_QUERY
+what time doctor arrives,DOCTOR_QUERY
+when doctor starts duty,DOCTOR_QUERY
+doctor visiting schedule,DOCTOR_QUERY
+is doctor working today,DOCTOR_QUERY
+hello there,GREETING
+hi assistant,GREETING
+good afternoon,GREETING
+hey there,GREETING
+hello hospital bot,GREETING
+thanks for assistance,GENERAL_QUERY
+many thanks for help,GENERAL_QUERY
+thank you very much,GENERAL_QUERY
+appreciate your support,GENERAL_QUERY
+ok thank you,GENERAL_QUERY
+i dont know what this means,UNKNOWN
+this output seems wrong,UNKNOWN
+something is not right here,UNKNOWN
+i am confused about this,UNKNOWN
+this response looks incorrect,UNKNOWN
+i started feeling feverish today,SYMPTOM_REPORT
+my body temperature seems higher than usual,SYMPTOM_REPORT
+i feel like i might be getting a fever,SYMPTOM_REPORT
+sudden fever symptoms appeared,SYMPTOM_REPORT
+i am feeling hot and weak,SYMPTOM_REPORT
+fever started a few hours ago,SYMPTOM_REPORT
+my body feels very warm,SYMPTOM_REPORT
+temperature feels elevated today,SYMPTOM_REPORT
+i feel mild fever symptoms,SYMPTOM_REPORT
+my forehead feels hot,SYMPTOM_REPORT
+headache started this afternoon,SYMPTOM_REPORT
+sharp headache pain,SYMPTOM_REPORT
+my head feels heavy today,SYMPTOM_REPORT
+pressure in my head,SYMPTOM_REPORT
+throbbing pain in my head,SYMPTOM_REPORT
+pain around the temples,SYMPTOM_REPORT
+my head is aching,SYMPTOM_REPORT
+constant headache all day,SYMPTOM_REPORT
+pain spreading across my head,SYMPTOM_REPORT
+my head hurts when i move,SYMPTOM_REPORT
+i keep coughing repeatedly,SYMPTOM_REPORT
+cough started last night,SYMPTOM_REPORT
+dry cough all day,SYMPTOM_REPORT
+my cough is getting worse,SYMPTOM_REPORT
+persistent cough today,SYMPTOM_REPORT
+cough with sore throat,SYMPTOM_REPORT
+continuous coughing,SYMPTOM_REPORT
+chest hurts when i cough,SYMPTOM_REPORT
+i feel irritation when coughing,SYMPTOM_REPORT
+my cough feels severe,SYMPTOM_REPORT
+breathing feels tight,SYMPTOM_REPORT
+short breath when walking,SYMPTOM_REPORT
+i feel breathless today,SYMPTOM_REPORT
+difficulty breathing,SYMPTOM_REPORT
+breathing feels restricted,SYMPTOM_REPORT
+lungs feel heavy,SYMPTOM_REPORT
+deep breathing hurts,SYMPTOM_REPORT
+breathing discomfort,SYMPTOM_REPORT
+i struggle to breathe,SYMPTOM_REPORT
+air feels hard to inhale,SYMPTOM_REPORT
+pain around chest,SYMPTOM_REPORT
+chest discomfort today,SYMPTOM_REPORT
+tightness in chest area,SYMPTOM_REPORT
+burning sensation in chest,SYMPTOM_REPORT
+pressure on my chest,SYMPTOM_REPORT
+sharp chest pain today,SYMPTOM_REPORT
+pain while breathing,SYMPTOM_REPORT
+chest pain after coughing,SYMPTOM_REPORT
+sudden chest pain,SYMPTOM_REPORT
+my chest feels sore,SYMPTOM_REPORT
+stomach pain today,SYMPTOM_REPORT
+pain in belly area,SYMPTOM_REPORT
+abdominal pain started today,SYMPTOM_REPORT
+stomach cramps today,SYMPTOM_REPORT
+pain in lower stomach,SYMPTOM_REPORT
+my stomach feels uncomfortable,SYMPTOM_REPORT
+digestive pain today,SYMPTOM_REPORT
+stomach discomfort after eating,SYMPTOM_REPORT
+sharp pain in stomach,SYMPTOM_REPORT
+belly pain getting worse,SYMPTOM_REPORT
+vomiting today,SYMPTOM_REPORT
+nausea feeling,SYMPTOM_REPORT
+i feel like throwing up,SYMPTOM_REPORT
+vomited earlier,SYMPTOM_REPORT
+nausea started today,SYMPTOM_REPORT
+vomiting repeatedly,SYMPTOM_REPORT
+feeling sick in stomach,SYMPTOM_REPORT
+i feel nauseous,SYMPTOM_REPORT
+stomach nausea today,SYMPTOM_REPORT
+vomiting again,SYMPTOM_REPORT
+runny nose,SYMPTOM_REPORT
+blocked nose today,SYMPTOM_REPORT
+cold symptoms appearing,SYMPTOM_REPORT
+sneezing a lot,SYMPTOM_REPORT
+nasal congestion,SYMPTOM_REPORT
+my nose feels stuffed,SYMPTOM_REPORT
+runny nose since morning,SYMPTOM_REPORT
+heavy cold today,SYMPTOM_REPORT
+sneezing continuously,SYMPTOM_REPORT
+nose congestion today,SYMPTOM_REPORT
+my body feels very weak,SYMPTOM_REPORT
+i feel extremely tired,SYMPTOM_REPORT
+fatigue today,SYMPTOM_REPORT
+low energy level,SYMPTOM_REPORT
+body weakness,SYMPTOM_REPORT
+i feel drained,SYMPTOM_REPORT
+exhaustion today,SYMPTOM_REPORT
+my body feels tired,SYMPTOM_REPORT
+lack of energy,SYMPTOM_REPORT
+feeling fatigued,SYMPTOM_REPORT
+i feel dizzy today,SYMPTOM_REPORT
+lightheaded feeling,SYMPTOM_REPORT
+room feels spinning,SYMPTOM_REPORT
+balance feels off,SYMPTOM_REPORT
+dizziness when standing,SYMPTOM_REPORT
+mild dizziness,SYMPTOM_REPORT
+sudden dizzy spell,SYMPTOM_REPORT
+feeling faint,SYMPTOM_REPORT
+head spinning,SYMPTOM_REPORT
+unstable balance,SYMPTOM_REPORT
+i want to book doctor appointment,APPOINTMENT_BOOK
+book appointment with doctor,APPOINTMENT_BOOK
+schedule hospital appointment,APPOINTMENT_BOOK
+please arrange doctor consultation,APPOINTMENT_BOOK
+i need to see a doctor,APPOINTMENT_BOOK
+schedule appointment tomorrow,APPOINTMENT_BOOK
+book medical appointment,APPOINTMENT_BOOK
+arrange doctor visit,APPOINTMENT_BOOK
+schedule consultation with doctor,APPOINTMENT_BOOK
+book doctor visit,APPOINTMENT_BOOK
+i need cardiologist appointment,APPOINTMENT_BOOK
+book dermatologist appointment,APPOINTMENT_BOOK
+schedule neurologist visit,APPOINTMENT_BOOK
+book skin doctor appointment,APPOINTMENT_BOOK
+schedule heart specialist visit,APPOINTMENT_BOOK
+book appointment with neurologist,APPOINTMENT_BOOK
+arrange specialist appointment,APPOINTMENT_BOOK
+schedule doctor consultation tomorrow,APPOINTMENT_BOOK
+book physician appointment,APPOINTMENT_BOOK
+i need hospital consultation,APPOINTMENT_BOOK
+cancel my doctor visit,APPOINTMENT_CANCEL
+please cancel my appointment,APPOINTMENT_CANCEL
+cancel scheduled appointment,APPOINTMENT_CANCEL
+remove my booking,APPOINTMENT_CANCEL
+cancel hospital appointment,APPOINTMENT_CANCEL
+cancel tomorrow visit,APPOINTMENT_CANCEL
+i want to cancel appointment,APPOINTMENT_CANCEL
+cancel my consultation,APPOINTMENT_CANCEL
+cancel doctor appointment please,APPOINTMENT_CANCEL
+cancel upcoming appointment,APPOINTMENT_CANCEL
+reschedule doctor appointment,APPOINTMENT_RESCHEDULE
+shift appointment time,APPOINTMENT_RESCHEDULE
+change doctor visit timing,APPOINTMENT_RESCHEDULE
+reschedule hospital appointment,APPOINTMENT_RESCHEDULE
+shift consultation time,APPOINTMENT_RESCHEDULE
+move appointment to tomorrow,APPOINTMENT_RESCHEDULE
+change appointment slot,APPOINTMENT_RESCHEDULE
+reschedule visit with doctor,APPOINTMENT_RESCHEDULE
+move my appointment to later,SYMPTOM_REPORT
+change appointment to another day,APPOINTMENT_RESCHEDULE
+where is cardiology department,DEPARTMENT_QUERY
+location of cardiology department,DEPARTMENT_QUERY
+where can i find cardiologist,DEPARTMENT_QUERY
+where is neurology department,DEPARTMENT_QUERY
+where is dermatology department,DEPARTMENT_QUERY
+where can i find skin doctor department,DEPARTMENT_QUERY
+where is neuro clinic,DEPARTMENT_QUERY
+which floor has cardiology department,DEPARTMENT_QUERY
+location of dermatology department,DEPARTMENT_QUERY
+where is heart department,DEPARTMENT_QUERY
+when is doctor available,DOCTOR_QUERY
+doctor availability today,DOCTOR_QUERY
+what time doctor comes,DOCTOR_QUERY
+doctor working hours,DOCTOR_QUERY
+doctor visiting hours,DOCTOR_QUERY
+when doctor starts duty,DOCTOR_QUERY
+doctor consultation hours,DOCTOR_QUERY
+is doctor available today,DOCTOR_QUERY
+when can i meet doctor,DOCTOR_QUERY
+doctor schedule today,DOCTOR_QUERY
+hello there,GREETING
+hi assistant,GREETING
+good afternoon,GREETING
+hey there,GREETING
+hello hospital bot,GREETING
+thanks for help,GENERAL_QUERY
+many thanks,GENERAL_QUERY
+thank you very much,GENERAL_QUERY
+appreciate the help,GENERAL_QUERY
+ok thank you,GENERAL_QUERY
+i dont understand this,UNKNOWN
+this response seems wrong,UNKNOWN
+something is incorrect,UNKNOWN
+this output confuses me,UNKNOWN
+i am not sure what this means,UNKNOWN

@@ -3,32 +3,136 @@
     "cardiology",
     "cardiologist",
     "heart doctor",
-    "heart"
+    "heart specialist",
+    "heart department",
+    "cardiac",
+    "cardiac doctor",
+    "cardiac specialist",
+    "heart clinic",
+    "heart problem doctor"
   ],
+
   "neurology": [
     "neurology",
+    "neurologist",
     "brain doctor",
-    "neuro"
+    "brain specialist",
+    "neuro doctor",
+    "neuro specialist",
+    "brain department",
+    "nervous system doctor",
+    "neuro clinic"
   ],
+
   "dermatology": [
     "dermatology",
+    "dermatologist",
     "skin doctor",
-    "skin"
+    "skin specialist",
+    "skin department",
+    "skin clinic",
+    "skin problem doctor",
+    "rash doctor",
+    "itching doctor"
   ],
+
   "general_medicine": [
+    "general medicine",
     "general doctor",
     "physician",
-    "general medicine"
+    "general physician",
+    "medicine department",
+    "medical doctor",
+    "family doctor",
+    "primary doctor",
+    "regular doctor"
   ],
+
   "orthopedics": [
-    "bone doctor",
     "orthopedic",
-    "bone"
+    "orthopedics",
+    "bone doctor",
+    "bone specialist",
+    "joint doctor",
+    "joint specialist",
+    "fracture doctor",
+    "bone department",
+    "spine doctor",
+    "knee doctor"
   ],
+
   "ent": [
+    "ent",
+    "ear nose throat",
     "ear doctor",
     "nose doctor",
     "throat doctor",
-    "ent"
+    "ent specialist",
+    "ent department",
+    "ear nose throat specialist"
+  ],
+
+  "gastroenterology": [
+    "gastroenterology",
+    "gastro doctor",
+    "stomach doctor",
+    "digestive doctor",
+    "digestive specialist",
+    "stomach specialist",
+    "gastro specialist",
+    "digestive department"
+  ],
+
+  "pulmonology": [
+    "pulmonology",
+    "pulmonologist",
+    "lung doctor",
+    "lung specialist",
+    "respiratory doctor",
+    "breathing doctor",
+    "lung department",
+    "respiratory specialist"
+  ],
+
+  "urology": [
+    "urology",
+    "urologist",
+    "urine doctor",
+    "kidney doctor",
+    "urinary doctor",
+    "urinary specialist",
+    "kidney specialist",
+    "urology department"
+  ],
+
+  "psychiatry": [
+    "psychiatry",
+    "psychiatrist",
+    "mental doctor",
+    "mental health doctor",
+    "mental specialist",
+    "mind doctor",
+    "psych doctor",
+    "mental department"
+  ],
+
+  "ophthalmology": [
+    "ophthalmology",
+    "eye doctor",
+    "eye specialist",
+    "vision doctor",
+    "vision specialist",
+    "eye department",
+    "eye clinic"
+  ],
+
+  "gynecology": [
+    "gynecology",
+    "gynecologist",
+    "women doctor",
+    "women specialist",
+    "pregnancy doctor",
+    "female doctor",
+    "gyne department"
   ]
 }
