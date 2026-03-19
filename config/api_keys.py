@@ -1,0 +1,1 @@
+SARVAM_API_KEY = "sk_69cwz5sk_AQe0riLTCMJplbOTi5VesCsi"
