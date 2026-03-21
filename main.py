@@ -1,4 +1,3 @@
-# main.py
 import time
 import sys
 import re
@@ -59,10 +58,8 @@ def main():
         speak("आपके जवाबों को प्रोसेस कर रहा हूँ..." if is_hindi else "Processing your answers...", tts_lang)
         final_raw = final_analysis(processed_text, qa_pairs, lang_name, nlp_result['entities'])
 
-        # Strong cleaning + parsing
         final_raw = re.sub(r'<think>.*?</think>', '', final_raw, flags=re.DOTALL | re.IGNORECASE)
 
-        # Robust splitting for Summary and Advice
         summary_part = "Summary not generated"
         advice_part = "Consult a doctor immediately."
 
@@ -74,7 +71,6 @@ def main():
         elif "Advice:" in final_raw:
             advice_part = final_raw.split("Advice:")[-1].strip()
 
-        # === FINAL CLEAN REPORT ===
         print("\n" + "═" * 80)
         print("RAYA MEDICAL REPORT")
         print("═" * 80)

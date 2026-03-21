@@ -1,4 +1,3 @@
-# ai/question_flow.py
 from ai.sarvam_client import ask_sarvam
 import re
 
@@ -10,18 +9,18 @@ def clean_for_tts(text: str, language: str = 'english') -> str:
         else:
             return "क्षमा करें, मैं समझ नहीं पाया। कृपया दोबारा बताएं।"
 
-    # Remove <think> blocks
+    
     text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL | re.IGNORECASE)
     text = re.sub(r'<think>.*', '', text, flags=re.DOTALL | re.IGNORECASE)
 
-    # Remove quotes, markdown, symbols
+   
     text = re.sub(r'["\'`‘’“”]', '', text)
     text = re.sub(r'[\*\_\-\=\+\|\[\]\(\)\{\}\<\>]', ' ', text)
 
-    # Remove punctuation TTS reads aloud
+    
     text = re.sub(r'[.,;:!?]', '', text)
 
-    # Remove bad prefixes
+    
     bad = [r'Explanation:', r'Summary:', r'Advice:', r'Note:', r'Output:', r'Patient said', r'Let me break']
     for p in bad:
         text = re.sub(p, '', text, flags=re.IGNORECASE)
