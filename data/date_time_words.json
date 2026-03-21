@@ -1,0 +1,8 @@
+{
+  "today": ["aaj", "today"],
+  "yesterday": ["kal", "yesterday"],
+  "tomorrow": ["parso", "tomorrow"],
+  "last_night": ["kal raat", "last night", "raat se"],
+  "morning": ["subah", "morning"],
+  "evening": ["shaam", "evening"]
+}

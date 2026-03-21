@@ -1,0 +1,408 @@
+[
+    {
+        "language": "english",
+        "raw_input": "i am having a severe",
+        "processed_input": "i am having a severe",
+        "nlp": {
+            "intent": [
+                "SYMPTOM_REPORT"
+            ],
+            "confidence": 0.9913329482078552,
+            "entities": {
+                "symptoms": [],
+                "negatedSymptoms": [],
+                "departments": [],
+                "severity": "severe",
+                "duration": null,
+                "date": null,
+                "time": null,
+                "bodyPart": null
+            },
+            "case_id": "CASE_4c7484be",
+            "summary": "Patient complaint unclear."
+        },
+        "questions_answers": "1. Where is the pain or discomfort located? \u2192 middle of the\n2. How long have you been experiencing this? \u2192 since last night\n3. How severe is the pain or discomfort (1-10)? \u2192 solid sex\n4. Are there any other symptoms accompanying this, like fever or dizziness? \u2192 i am busy\n5. When did this start, and did anything specific trigger it? \u2192 i haven't slept since last night because i",
+        "final": "<think>\nOkay, let's tackle this. The user provided a patient's initial problem and follow-up Q&A. My job is to generate a summary, list symptoms, determine severity, and give advice.\n\nFirst, the initial problem starts with \"I am having a severe...\" but cuts off. The Q&A might fill in the details. Let's look at the follow-ups.\n\n1. Pain location: middle of the... Hmm, the answer is cut off. Maybe \"middle of the back\" or \"chest\"? The original might have been a typo or incomplete. Since it's cut off, I need to infer. \"Middle of the\" could be \"chest\" or \"abdomen\". But the user didn't specify. Maybe I should note it as incomplete but proceed with the given data.\n\n2. Duration: since last night. So onset is recent, about a day or so.\n\n3. Severity: solid sex. That's confusing. Maybe a mistranslation or typo. \"Solid sex\" doesn't make sense. Wait, maybe \"solid 6\" or \"solid seven\"? Or \"solid\" as in constant, and \"sex\" as a mistyped number. Alternatively, \"solid\" as in \"solid pain\" and \"sex\" as a typing error for \"seven\". If the original was a scale from 1-10, \"solid sex\" might be a mistake. Let's assume the user meant \"solid 8\" or \"9\", indicating high severity. Alternatively, maybe \"solid\" is a typo for \"severe\" and \"sex\" is irrelevant. But without more context, it's tricky. Maybe the severity is high, considering the initial \"severe\".\n\n4. Other symptoms: \"i am busy\". That's unclear. Maybe a typo. Could it be \"I am dizzy\" or \"I have nausea\"? Alternatively, the user might have intended to ask about other symptoms but said \"busy\" as a reason for not answering. Maybe there are no other symptoms, or the answer is incomplete. Since the user provided \"i am busy\" as the answer to question 4, perhaps they meant there are no other symptoms, but it's unclear. Maybe they didn't have time to answer, so we can't assume anything else.\n\n5. Onset: haven't slept since last night because... the answer is cut off. Maybe due to the pain or stress from the problem. Lack of sleep since the issue started.\n\nPutting this together: The patient has a severe pain/discomfort starting last night, located in the middle of an unspecified area (maybe a typo in the question, like \"middle of the back\" or \"chest\"), duration since last night, severity possibly high (assuming \"solid sex\" was a typo for a high number), no clear other symptoms (or incomplete answer), and hasn't slept since onset.\n\nSymptoms: Severe pain/discomfort in unspecified location (middle of the...), insomnia since onset.\n\nSeverity: High, given the initial \"severe\" and possible high pain scale.\n\nAdvice: Since the exact location is unclear, recommend consulting a healthcare professional immediately, especially if pain is severe and accompanied by other possible symptoms (like chest pain could be cardiac, abdominal could be appendicitis, etc.). Emphasize seeking medical attention promptly, especially if there's difficulty breathing, chest pain, or other red flags. Also, address the lack of sleep and possible stress contributing to the issue.\n\nNeed to make sure the summary captures the incomplete info without making assumptions. Mention the cut-offs and possible interpretations but stay factual.\n</think>\n\n**Summary:**  \nThe patient reports severe pain/discomfort starting last night (middle of the [unspecified area, e.g., back/chest/abdomen]) and has not slept since onset. The pain severity is described as \"solid sex,\" which may indicate a typo or unclear phrasing (e.g., a severity score like 8/10). No additional symptoms (e.g., fever, dizziness) are specified due to incomplete response.  \n\n**Symptoms:**  \n- Severe pain/discomfort (location unclear, possibly middle of back/chest/abdomen).  \n- Insomnia since symptom onset.  \n\n**Severity:**  \nHigh (due to intensity, lack of sleep, and potential urgency of unspecified pain location).  \n\n**Advice:**  \n1. **Seek Immediate Medical Attention:** Given the severity and lack of sleep, this could indicate a serious condition (e.g., cardiac issues, appendicitis, or other emergencies).  \n2. **Describe Symptoms Clearly:** If consulting a doctor, specify pain location (e.g., chest, abdomen, back) and any additional symptoms (e.g., nausea, shortness of breath).  \n3. **Avoid Self-Diagnosis:** Do not delay professional evaluation, especially if pain persists or worsens.  \n4. **Hydrate and Rest:** Sip water and avoid strenuous activity until medical advice is received.  \n\n*Note: The unclear pain location and phrasing (\"solid sex\") require urgent clarification by a healthcare provider.*",
+        "timestamp": "Sat Mar 21 00:58:56 2026"
+    },
+    {
+        "language": "hindi",
+        "raw_input": "\u092e\u0941\u091d\u0947 \u0915\u0932 \u0930\u093e\u0924 \u0938\u0947 \u0938\u0930 \u092e\u0947\u0902 \u092c\u0939\u0941\u0924",
+        "processed_input": "\u092e\u0941\u091d\u0947 \u0915\u0932 \u0930\u093e\u0924 \u0938\u0947 \u0938\u0930 \u092e\u0947\u0902 \u092c\u0939\u0941\u0924",
+        "nlp": {
+            "intent": [
+                "SYMPTOM_REPORT"
+            ],
+            "confidence": 0.9885948896408081,
+            "entities": {
+                "symptoms": [],
+                "negatedSymptoms": [],
+                "departments": [],
+                "severity": null,
+                "duration": null,
+                "date": null,
+                "time": null,
+                "bodyPart": null
+            },
+            "case_id": "CASE_fa96988f",
+            "summary": "Patient complaint unclear."
+        },
+        "qa": "1. \u0926\u0930\u094d\u0926 \u0915\u0948\u0938\u093e \u0939\u0948? \u2192 \u0905\u092d\u0940 \u0924\u094b \u0925\u094b\u0921\u093c\u093e \u0920\u0940\u0915 \u0939\u0948 \u092a\u0930 \u0930\u093e\u0924 \u0915\u094b \u0925\u094b\u0921\u093c\u093e \u092c\u0922\u093c\n2. \u0938\u0930 \u0915\u0947 \u0915\u093f\u0938 \u0939\u093f\u0938\u094d\u0938\u0947 \u092e\u0947\u0902 \u0926\u0930\u094d\u0926 \u0939\u0948? \u2192 \u092b\u094d\u0930\u0902\u091f \u0915\u0947 \u090f\u0930\u093f\u092f\u093e \u092e\u0947\u0902 \u0906\u0907\u092c\u094d\u0930\u094b\u091c \u0915\u0947 \u090a\u092a\u0930\n3. \u0915\u093f\u0924\u0928\u0940 \u0926\u0947\u0930 \u0924\u0915 \u0926\u0930\u094d\u0926 \u0930\u0939\u093e? \u2192 \u0926\u0930\u094d\u0926 \u0924\u094b \u0905\u092d\u0940\n4. \u0915\u094d\u092f\u093e \u092c\u0941\u0916\u093e\u0930 \u092f\u093e \u091a\u0915\u094d\u0915\u0930 \u092d\u0940 \u0939\u0948\u0902? \u2192 \u0939\u093e\u0902 \u0925\u094b\u0921\u093c\u0947 \u091a\u0915\u094d\u0915\u0930 \u091c\u0948\u0938\u0947 \u092d\u0940 \u0906\n5. \u0915\u094b\u0908 \u0926\u0935\u093e \u0932\u0940 \u0939\u0948? \u2192 \u0928\u0939\u0940\u0902 \u0915\u094b\u0908 \u0926\u0935\u093e \u0928\u0939\u0940\u0902",
+        "final": "\u0938\u093e\u0930\u093e\u0902\u0936: \u0915\u0932 \u0930\u093e\u0924 \u0938\u0947 \u0938\u0930 \u0926\u0930\u094d\u0926, \u092b\u094d\u0930\u0902\u091f \u090f\u0930\u093f\u092f\u093e \u092e\u0947\u0902 \u0906\u0907\u092c\u094d\u0930\u094b\u091c \u0915\u0947 \u090a\u092a\u0930\u0964\n\u0932\u0915\u094d\u0937\u0923: \u0938\u093f\u0930\u0926\u0930\u094d\u0926, \u0939\u0932\u094d\u0915\u0947 \u091a\u0915\u094d\u0915\u0930, \u0915\u094b\u0908 \u092c\u0941\u0916\u093e\u0930 \u0928\u0939\u0940\u0902\u0964\n\u0924\u0940\u0935\u094d\u0930\u0924\u093e: \u092e\u0927\u094d\u092f\u092e\u0964\n\u0938\u0932\u093e\u0939: \u0906\u0930\u093e\u092e \u0915\u0930\u0947\u0902, \u0939\u093e\u0907\u0921\u094d\u0930\u0947\u091f\u0947\u0921 \u0930\u0939\u0947\u0902, \u0938\u092a\u094b\u0930\u094d\u091f \u0915\u0947 \u0932\u093f\u090f \u0921\u0949\u0915\u094d\u091f\u0930 \u0938\u0947 \u0938\u0902\u092a\u0930\u094d\u0915 \u0915\u0930\u0947\u0902\u0964",
+        "timestamp": "Sat Mar 21 01:03:08 2026"
+    },
+    {
+        "language": "hindi",
+        "raw_input": "\u0915\u0932 \u0930\u093e\u0924 \u0938\u0947 \u092e\u0947\u0930\u0947 \u0938\u0930 \u092e\u0947\u0902 \u092c\u0939\u0941\u0924",
+        "processed_input": "\u0915\u0932 \u0930\u093e\u0924 \u0938\u0947 \u092e\u0947\u0930\u0947 \u0938\u0930 \u092e\u0947\u0902 \u092c\u0939\u0941\u0924",
+        "nlp_entities": {
+            "symptoms": [],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": null,
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": null
+        },
+        "nlp_summary": "Patient complaint unclear.",
+        "qa_pairs": "Can you tell me more about your pain? \u2192 \u0939\u093e\u0902 \u092e\u0947\u0930\u0947 \u0938\u0930 \u092e\u0947\u0902 \u0926\u0930\u094d\u0926 \u0939\u094b \u0930\u0939\u093e \u0939\u0948\nWhen did it start? \u2192 \u0915\u0932 \u0930\u093e\u0924 \u0905\u0930\u093e\u0909\u0902\u0921 12:01\nIs it getting worse? \u2192 \u0928\u0939\u0940\u0902 \u0905\u092d\u0940 \u0924\u094b \u092a\u0939\u0932\u0947 \u0938\u0947 \u0920\u0940\u0915 \u0939\u0948\nAny other symptoms? \u2192 \u0925\u094b\u0921\u093c\u0940 \u0938\u0940\nDid you take any medicine? \u2192 \u0928\u0939\u0940\u0902",
+        "final_result": "\u0938\u093e\u0930\u093e\u0902\u0936: \u0915\u0932 \u0930\u093e\u0924 \u0938\u0947 \u0938\u0930 \u092e\u0947\u0902 \u0926\u0930\u094d\u0926, \u091c\u094b \u0905\u092d\u0940 \u092a\u0939\u0932\u0947 \u0938\u0947 \u0920\u0940\u0915 \u0939\u0948\u0964 \u0932\u0915\u094d\u0937\u0923: \u0938\u0930 \u092e\u0947\u0902 \u0926\u0930\u094d\u0926, \u0925\u094b\u0921\u093c\u0940 \u0938\u0940 \u0905\u0928\u094d\u092f \u0938\u092e\u0938\u094d\u092f\u093e\u090f\u0902 \u091c\u0948\u0938\u0947 \u091a\u0915\u094d\u0915\u0930 \u0906\u0928\u093e \u092f\u093e \u0915\u092e\u091c\u094b\u0930\u0940\u0964 \u0917\u0902\u092d\u0940\u0930\u0924\u093e: \u0905\u092d\u0940 \u0926\u0930\u094d\u0926 \u0915\u092e \u0939\u0941\u0906 \u0939\u0948, \u0932\u0947\u0915\u093f\u0928 \u0925\u094b\u0921\u093c\u0940 \u0938\u093e\u0935\u0927\u093e\u0928\u0940 \u091c\u093c\u0930\u0942\u0930\u0940\u0964 \u0938\u0932\u093e\u0939: \u0915\u0908 \u0918\u0902\u091f\u0947 \u0906\u0930\u093e\u092e \u0915\u0930\u0947\u0902, \u0939\u093e\u0907\u0921\u094d\u0930\u0947\u091f\u0947\u0921 \u0930\u0939\u0947\u0902, \u0938\u093f\u0930 \u092a\u0930 \u0920\u0902\u0921\u093e \u0924\u094c\u0932\u093f\u092f\u093e \u0930\u0916\u0947\u0902\u0964 \u0905\u0917\u0930 \u0926\u0930\u094d\u0926 \u092c\u0922\u093c\u0947 \u092f\u093e \u092c\u0941\u0916\u093e\u0930/\u0909\u0932\u094d\u091f\u0940 \u0939\u0941\u0908 \u0924\u094b \u0924\u0941\u0930\u0902\u0924 \u0921\u0949\u0915\u094d\u091f\u0930 \u0938\u0947 \u092e\u093f\u0932\u0947\u0902\u0964",
+        "timestamp": "Sat Mar 21 01:19:59 2026"
+    },
+    {
+        "language": "hindi",
+        "raw_input": "\u092e\u0941\u091d\u0947 \u0915\u0932 \u0930\u093e\u0924 \u0938\u0947",
+        "nlp_entities": {
+            "symptoms": [],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": null,
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": null
+        },
+        "qa_pairs": "\u0926\u0930\u094d\u0926 \u0915\u0948\u0938\u093e \u0939\u0948? \u2192 \u0926\u0930\u094d\u0926 \u0925\u094b\u0921\u093c\u093e \u0924\u0947\u091c \u0939\u0948 \u092e\u0948\u0902\n\u092f\u0939 \u0915\u092c \u0936\u0941\u0930\u0942 \u0939\u0941\u0906? \u2192 12:00 \u0915\u0947 \u0906\u0938\u092a\u093e\u0938 \u092e\u0947\u0902 \u0915\u0932 \u0930\u093e\u0924 12:00\n\u0915\u094d\u092f\u093e \u092f\u0939 \u092c\u0922\u093c \u0930\u0939\u093e \u0939\u0948? \u2192 \u0939\u093e\u0902 \u0939\u093e\u0902\n\u0915\u094b\u0908 \u0905\u0928\u094d\u092f \u0932\u0915\u094d\u0937\u0923 \u0939\u0948\u0902? \u2192 \u091a\u0915\u094d\u0915\u0930 \u0938\u093e \u092d\u0940\n\u0915\u094b\u0908 \u0926\u0935\u093e \u0932\u0940 \u0939\u0948? \u2192 \u0928\u0939\u0940\u0902",
+        "final_result": "\u0906\u092a\u0915\u094b \u0915\u0932 \u0930\u093e\u0924 12 \u092c\u091c\u0947 \u0915\u0947 \u0906\u0938\u092a\u093e\u0938 \u0926\u0930\u094d\u0926 \u0914\u0930 \u091a\u0915\u094d\u0915\u0930 \u0906\u0928\u0947 \u0932\u0917\u0947\u0964 \u0926\u0930\u094d\u0926 \u0915\u0940 \u092e\u0927\u094d\u092f\u092e \u0939\u0948 \u091c\u094b \u092c\u0922\u093c \u0930\u0939\u0940 \u0939\u0948\u0964 \u0926\u0930\u094d\u0926 \u0936\u0930\u0940\u0930 \u0915\u0947 \u0935\u093f\u0936\u093f\u0937\u094d\u091f \u0939\u093f\u0938\u094d\u0938\u0947 \u0915\u093e \u0909\u0932\u094d\u0932\u0947\u0916 \u0928\u0939\u0940\u0902 \u091a\u0915\u094d\u0915\u0930 \u0906\u0928\u093e\u0964 \u0917\u0902\u092d\u0940\u0930\u0924\u093e \u092e\u0927\u094d\u092f\u092e \u0924\u0941\u0930\u0902\u0924 \u0906\u0930\u093e\u092e \u0915\u0930\u0947\u0902 \u0939\u093e\u0907\u0921\u094d\u0930\u0947\u091f\u0947\u0921 \u0930\u0939\u0947\u0902 \u0914\u0930 \u0926\u0930\u094d\u0926 \u092c\u0922\u093c\u0928\u0947 \u092f\u093e \u091a\u0915\u094d\u0915\u0930 \u091c\u094d\u092f\u093e\u0926\u093e \u0939\u094b\u0928\u0947 \u092a\u0930 \u0921\u0949\u0915\u094d\u091f\u0930 \u0938\u0947 \u0938\u0902\u092a\u0930\u094d\u0915 \u0915\u0930\u0947\u0902\u0964 \u092c\u093f\u0928\u093e \u0921\u0949\u0915\u094d\u091f\u0930\u0940 \u0926\u0935\u093e\u090f\u0902 \u0928 \u0932\u0947\u0902\u0964",
+        "timestamp": "Sat Mar 21 01:59:25 2026"
+    },
+    {
+        "language": "hindi",
+        "raw_input": "\u092e\u0947\u0930\u0947 \u0938\u093f\u0930 \u092e\u0947\u0902 \u092c\u0939\u0941\u0924 \u0938\u0930 \u092e\u0947\u0902 \u092c\u0939\u0941\u0924 \u0926\u0930\u094d\u0926 \u0939\u094b \u0930\u0939\u093e \u092a\u0947\u091f \u092e\u0947\u0902 \u092d\u0940 \u0926\u0930\u094d\u0926 \u0915\u094c\u0928 \u0938\u0947 \u0921\u0949\u0915\u094d\u091f\u0930 \u0915\u0947 \u092a\u093e\u0938 \u091c\u093e\u0928\u093e",
+        "nlp_entities": {
+            "symptoms": [],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": null,
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": null
+        },
+        "qa_pairs": "\u0926\u0930\u094d\u0926 \u0915\u0948\u0938\u093e \u0939\u0948? \u2192 \u0926\u0930\u094d\u0926 \u0905\u092d\u0940 \u0924\u094b \u0925\u094b\u0921\u093c\u093e \u0915\u093e\u092e\n\u092f\u0939 \u0915\u092c \u0936\u0941\u0930\u0942 \u0939\u0941\u0906? \u2192 \u0915\u0932 \u0930\u093e\u0924 12:00\n\u0915\u094d\u092f\u093e \u092f\u0939 \u092c\u0922\u093c \u0930\u0939\u093e \u0939\u0948? \u2192 \u0905\u092d\u0940 \u0924\u094b \u092f\u0939 \u0915\u093e\u092e \u0939\u0948\n\u0915\u094b\u0908 \u0905\u0928\u094d\u092f \u0932\u0915\u094d\u0937\u0923 \u0939\u0948\u0902? \u2192 \u0939\u093e\u0902 \u092a\u0947\u091f \u092e\u0947\u0902 \u0926\u0930\u094d\u0926 \u0914\u0930\n\u0915\u094b\u0908 \u0926\u0935\u093e \u0932\u0940 \u0939\u0948? \u2192 \u0928\u0939\u0940\u0902 \u0915\u094b\u0908 \u0926\u0935\u093e",
+        "final_result": "\u0906\u092a\u0915\u0947 \u0938\u093f\u0930 \u0914\u0930 \u092a\u0947\u091f \u092e\u0947\u0902 \u0926\u0930\u094d\u0926 \u0915\u0940 \u0938\u092e\u0938\u094d\u092f\u093e \u092c\u094d\u0930\u0939\u094d\u092e\u093e\u0923\u0941 \u091a\u093f\u0915\u093f\u0924\u094d\u0938\u0915 \u0917\u0948\u0938\u094d\u091f\u094d\u0930\u094b\u090f\u0902\u091f\u0947\u0930\u094b\u0932\u0949\u091c\u093f\u0938\u094d\u091f \u092f\u093e \u0938\u093e\u092e\u093e\u0928\u094d\u092f \u091a\u093f\u0915\u093f\u0924\u094d\u0938\u0915 \u0938\u0947 \u0932\u0947\u0928\u0947 \u0915\u0940 \u091c\u093c\u0930\u0942\u0930\u0924 \u0939\u0948\u0964 \u0938\u093f\u0930\u0926\u0930\u094d\u0926 \u092a\u0947\u091f \u092e\u0947\u0902 \u0926\u0930\u094d\u0926 \u0926\u0930\u094d\u0926 \u0915\u0940 \u0936\u0941\u0930\u0941\u0906\u0924 \u0915\u0932 \u0930\u093e\u0924 1200 \u092c\u091c\u0947 \u092e\u0927\u094d\u092f\u092e \u0905\u092d\u0940 \u0938\u094d\u0925\u093f\u0930 \u0917\u0902\u092d\u0940\u0930\u0924\u093e \u092e\u0927\u094d\u092f\u092e Moderate 1 \u0924\u0941\u0930\u0902\u0924 \u0915\u094b\u0908 \u0905\u0928\u0941\u092d\u0935\u0940 \u0921\u0949\u0915\u094d\u091f\u0930 \u0938\u0947 \u092a\u0930\u093e\u092e\u0930\u094d\u0936 \u0932\u0947\u0902 2 \u092a\u093e\u0928\u0940 \u092a\u0940\u0924\u0947 \u0930\u0939\u0947\u0902 \u0914\u0930 \u0939\u0932\u094d\u0915\u093e \u0906\u0939\u093e\u0930 \u0932\u0947\u0902 3 \u0926\u0930\u094d\u0926 \u092c\u0922\u093c\u0928\u0947 \u092f\u093e \u092c\u0941\u0916\u093e\u0930/\u0909\u0932\u094d\u091f\u0940 \u0939\u094b\u0928\u0947 \u092a\u0930 \u0924\u0941\u0930\u0902\u0924 \u0905\u0938\u094d\u092a\u0924\u093e\u0932 \u091c\u093e\u090f\u0902 4 \u0926\u0930\u094d\u0926 \u0928\u093f\u0935\u093e\u0930\u0915 \u0926\u0935\u093e \u0921\u0949\u0915\u094d\u091f\u0930 \u0915\u0940 \u0938\u0947 \u0939\u0940 \u0932\u0947\u0902",
+        "timestamp": "Sat Mar 21 09:19:00 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "i am having a severe headache and stomach eggs in which doctor should i which doctor should i go would be nice if i could book an appointment",
+        "nlp_entities": {
+            "symptoms": [
+                "headache",
+                "cold"
+            ],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": "severe",
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": "stomach"
+        },
+        "qa_pairs": "How is the pain? \u2192 it's\nWhen did it start? \u2192 it started\nIs it getting worse? \u2192 no answer\nAny other symptoms? \u2192 i am busy\nAny medicine taken? \u2192 no answer",
+        "final_result": "Youre experiencing severe headache and stomach issues possibly with cold The headache and stomach discomfort are your main concerns and youre seeking medical Severe headache stomach discomfort possibly related to gastrointestinal issues mentions of being busy no additional provided Cold were mentioned but not elaborated High due to severe headache and persistent stomach discomfort Its best to consult a general physician or gastroenterologist for persistent severe If the headache is sudden intense or accompanied by confusion vision changes or weakness seek emergency care immediately For stomach issues avoid solid foods or caffeine temporarily and stay hydrated",
+        "timestamp": "Sat Mar 21 09:24:30 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "i am having a severe headache i am also having a stomach issues which doctor should i go can you book me an appointment",
+        "nlp_intent": "APPOINTMENT_BOOK",
+        "nlp_entities": {
+            "symptoms": [
+                "headache"
+            ],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": "severe",
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": "stomach"
+        },
+        "qa_pairs": "How is the pain? \u2192 it is elevated right now\nWhen did it start? \u2192 charted around\nIs it getting worse? \u2192 it is getting much worse\nAny other symptoms? \u2192 stomach pain dizz\nAny medicine taken? \u2192 adjust taken basic disprin",
+        "summary": "<think>\nOkay, let's tackle this. The user is experiencing a severe headache and stomach issues. They asked which doctor to visit and if I can book an appointment. The NLP detected symptoms: headache, stomach, severity severe. The patient's responses indicate the pain is elevated, started around a specific time, getting worse, with stomach pain and dizziness. They took basic disprin.\n\nFirst, I need to create a summary in one line. Maybe \"Severe headache and stomach issues with worsening symptoms.\" Then list symptoms: headache, stomach pain, dizziness. Severity is high. For advice, they need to see a general physician immediately, especially since symptoms are severe and getting worse. Also, mention avoiding self-medication and seeking emergency care if symptoms escalate. Need to keep the language clear and in the specified format without extra text. Make sure the advice is actionable and prioritizes urgency.\n</think>\n\n \u0917\u0902\u092d\u0940\u0930 \u0938\u093f\u0930\u0926\u0930\u094d\u0926 \u0914\u0930 \u092a\u0947\u091f \u092e\u0947\u0902 \u0926\u0930\u094d\u0926 \u0915\u0947 \u0938\u093e\u0925 \u0924\u0947\u091c\u093c\u0940 \u0938\u0947 \u092c\u0922\u093c\u0924\u0947 \u0932\u0915\u094d\u0937\u0923\nSymptoms: ['\u0938\u093f\u0930\u0926\u0930\u094d\u0926', '\u092a\u0947\u091f \u092e\u0947\u0902 \u0926\u0930\u094d\u0926', '\u091a\u0915\u094d\u0915\u0930 \u0906\u0928\u093e']\nSeverity: High",
+        "advice": "\u0924\u0941\u0930\u0902\u0924 \u0938\u093e\u092e\u093e\u0928\u094d\u092f \u091a\u093f\u0915\u093f\u0924\u094d\u0938\u0915 \u0938\u0947 \u092a\u0930\u093e\u092e\u0930\u094d\u0936 \u0932\u0947\u0902 \u0914\u0930 \u0928\u093f\u0915\u091f\u0924\u092e \u0938\u094d\u0935\u093e\u0938\u094d\u0925\u094d\u092f \u0938\u0941\u0935\u093f\u0927\u093e \u092e\u0947\u0902 \u091c\u093e\u0902\u091a \u0915\u0930\u0935\u093e\u090f\u0902",
+        "timestamp": "Sat Mar 21 09:49:46 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "i am having a severe headache also having stomach issues which doctor should i go to can you help me book an appointment",
+        "nlp_intent": "APPOINTMENT_BOOK",
+        "nlp_entities": {
+            "symptoms": [
+                "headache"
+            ],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": "severe",
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": "stomach"
+        },
+        "qa_pairs": "How is the pain? \u2192 it is elevating\nWhen did it start? \u2192 last night\nIs it getting worse? \u2192 it is getting\nAny other symptoms? \u2192 stomach\nAny medicine taken? \u2192 i have taken a basic para",
+        "summary": "<think>\nOkay, let's tackle this query. The user is reporting severe headache and stomach issues. They need to know which doctor to see and want help booking an appointment.\n\nFirst, the symptoms are headache and stomach problems. The user mentioned the headache is severe, and the stomach issues are part of their symptoms. The NLP detected \"headache\" as the main symptom with the body being stomach. Severity is high because they said \"severe.\"\n\nThe user also answered follow-up questions: the pain is elevating, started last night, is getting worse, and they took basic pain relief. The main issue here is combining headache and stomach issues. These could be related or separate. Possible causes could be a migraine with gastrointestinal symptoms or something else like a stomach infection or food poisoning. Since both are happening together, it's important to get a proper evaluation.\n\nThey need a doctor who can handle both. A general physician (GP) would be the first point of contact. Alternatively, a gastroenterologist for stomach issues, but since there's a severe headache, maybe a neurologist? But since the problem just started and they might not know the exact cause, a GP is better for initial assessment. The GP can check for other symptoms and refer if needed.\n\nAdvice should be to seek immediate medical attention if symptoms are severe and worsening. Also, suggest consulting a general physician first. Booking an appointment: maybe suggest online platforms or suggest visiting a nearby clinic. But the user asked how to book an appointment, but the response format doesn't allow providing booking steps. So the advice should be to consult a GP and mention booking through available methods without specifics.\n\nSeverity is high because it's severe and getting worse. Symptoms are headache and stomach issues. Summary should capture the main points concisely.\n</think>\n\n Severe headache and stomach issues starting last night, pain is increasing, basic pain relief taken.\nSymptoms: ['headache', 'stomach pain']\nSeverity: High",
+        "advice": "Consult a general physician immediately for evaluation of severe headache and stomach issues.",
+        "timestamp": "Sat Mar 21 10:06:53 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "i am having a severe he headache also stomach which doctor should i go to can you help me book an appointment",
+        "nlp_intent": "APPOINTMENT_BOOK",
+        "nlp_entities": {
+            "symptoms": [
+                "headache"
+            ],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": "severe",
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": "stomach"
+        },
+        "qa_pairs": "How is the pain? \u2192 it is elevat\nWhen did it start? \u2192 last night\nIs it getting worse? \u2192 yes it is\nAny other symptoms? \u2192 i am feeling\nAny medicine taken? \u2192 disprin",
+        "summary": "Summary Severe headache with stomach pain since last night worsening no relief from Disprin Symptoms headache stomach pain Severity High Advice Consult a general physician immediately for evaluation and further treatment",
+        "advice": "Summary Severe headache with stomach pain since last night worsening no relief from Disprin Symptoms headache stomach pain Severity High Advice Consult a general physician immediately for evaluation and further treatment",
+        "timestamp": "Sat Mar 21 10:14:48 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "i am having a severe headache also having stomach which doctor should i go to help me book an appointment",
+        "nlp_intent": "APPOINTMENT_BOOK",
+        "nlp_entities": {
+            "symptoms": [
+                "headache"
+            ],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": "severe",
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": "stomach"
+        },
+        "qa_pairs": "How is the pain? \u2192 elevating\nWhen did it start? \u2192 no answer\nIs it getting worse? \u2192 yes it is\nAny other symptoms? \u2192 stomach pain\nAny medicine taken? \u2192 disprin",
+        "summary": "Summary Severe headache with stomach pain and possible medication side effects Symptoms headache stomach pain Severity High Advice Consult a general physician immediately for evaluation especially if symptoms persist or worsen Mention Disprin use during consultation",
+        "advice": "\u0938\u0932\u093e\u0939: \u0921\u0949\u0915\u094d\u091f\u0930 \u0938\u0947 \u0938\u0902\u092a\u0930\u094d\u0915 \u0915\u0930\u0947\u0902\u0964",
+        "timestamp": "Sat Mar 21 10:24:05 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "i am having a headache since last also having stomach pain which doctor should i go where is the help me book an appointment",
+        "nlp_intents": [
+            "SYMPTOM_REPORT"
+        ],
+        "nlp_entities": {
+            "symptoms": [
+                "headache"
+            ],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": null,
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": "stomach"
+        },
+        "qa_pairs": "How is the pain? \u2192 erase elevating\nWhen did it start? \u2192 last night\nIs it getting worse? \u2192 no answer\nAny other symptoms? \u2192 no answer\nAny medicine taken? \u2192 disprin",
+        "summary": "Summary Patient reports headache and stomach pain since last night took disprin Symptoms headache stomach pain Severity Moderate Advice Consult a general physician or gastroenterologist for evaluation",
+        "advice": "Consult a doctor immediately.",
+        "timestamp": "Sat Mar 21 10:35:13 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "i am having headache since last also having stomach pain which doctor should i go can you help me book an appointment where is the cardio department located",
+        "nlp_intents": [
+            "APPOINTMENT_BOOK"
+        ],
+        "nlp_entities": {
+            "symptoms": [
+                "headache"
+            ],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": null,
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": "stomach"
+        },
+        "qa_pairs": "How is the pain? \u2192 is elevat\nWhen did it start? \u2192 last night\nIs it getting worse? \u2192 no actually\nAny other symptoms? \u2192 best fever\nAny medicine taken? \u2192 i haven",
+        "summary": "Summary Patient reports headache and stomach pain starting last night no worsening or other symptoms no medicine taken Symptoms headache stomach pain Severity Low Advice Consult a general physician for initial evaluation Mention",
+        "advice": "Consult a doctor immediately.",
+        "timestamp": "Sat Mar 21 10:42:46 2026"
+    },
+    {
+        "language": "hindi",
+        "raw_input": "\u092e\u0941\u091d\u0947 \u0915\u0932 \u0930\u093e\u0924 \u0938\u0947 \u092a\u0947\u091f \u092e\u0947\u0902 \u092c\u0939\u0941\u0924",
+        "nlp_intents": [
+            "UNCERTAIN"
+        ],
+        "nlp_entities": {
+            "symptoms": [],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": null,
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": null
+        },
+        "qa_pairs": "\u0926\u0930\u094d\u0926 \u0915\u0948\u0938\u093e \u0939\u0948? \u2192 \u092c\u0939\u0941\u0924\n\u092f\u0939 \u0915\u092c \u0936\u0941\u0930\u0942 \u0939\u0941\u0906? \u2192 \u0915\u0932 \u0930\u093e\u0924\n\u0915\u094d\u092f\u093e \u092f\u0939 \u092c\u0922\u093c \u0930\u0939\u093e \u0939\u0948? \u2192 \u0928\u0939\u0940\u0902 \u0905\u092d\u0940\n\u0915\u094b\u0908 \u0905\u0928\u094d\u092f \u0932\u0915\u094d\u0937\u0923? \u2192 \u0938\u0930 \u092e\u0947\u0902 \u092d\u0940 \u0926\u0930\u094d\u0926 \u0939\u0948\n\u0915\u094b\u0908 \u0926\u0935\u093e \u0932\u0940? \u2192 \u0928\u0939\u0940\u0902",
+        "summary": "Summary \u092a\u0947\u091f \u092e\u0947\u0902 \u0926\u0930\u094d\u0926 \u0914\u0930 \u0938\u0930\u0926\u0930\u094d\u0926 \u0915\u0947 \u0932\u0915\u094d\u0937\u0923 Symptoms \u092a\u0947\u091f \u092e\u0947\u0902 \u0926\u0930\u094d\u0926 \u0938\u0930 \u092e\u0947\u0902 \u0926\u0930\u094d\u0926 Severity Moderate Advice \u0906\u0930\u093e\u092e \u0915\u0930\u0947\u0902 \u0939\u0932\u094d\u0915\u093e \u092d\u094b\u091c\u0928 \u0932\u0947\u0902 \u0914\u0930 \u092a\u0930\u094d\u092f\u093e\u092a\u094d\u0924 \u092a\u093e\u0928\u0940 \u092a\u093f\u090f\u0902 \u0926\u0930\u094d\u0926 \u092c\u0922\u093c\u0928\u0947 \u092f\u093e \u092c\u0941\u0916\u093e\u0930 \u0939\u094b\u0928\u0947 \u092a\u0930 \u0924\u0941\u0930\u0902\u0924 \u0921\u0949\u0915\u094d\u091f\u0930 \u0938\u0947 \u0938\u0902\u092a\u0930\u094d\u0915 \u0915\u0930\u0947\u0902",
+        "advice": "Consult a doctor immediately.",
+        "timestamp": "Sat Mar 21 11:05:21 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "i am having stomach issues since last can you help me book an appointment and also where is the neur",
+        "nlp_intents": [
+            "DEPARTMENT_QUERY",
+            "APPOINTMENT_BOOK"
+        ],
+        "nlp_entities": {
+            "symptoms": [],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": null,
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": "stomach"
+        },
+        "qa_pairs": "How is the pain? \u2192 it is moderate\nWhen did it start? \u2192 like 2 hours\nIs it getting worse? \u2192 no it's actually the\nAny other symptoms? \u2192 i feel a little heavy\nAny medicine taken? \u2192 no no i",
+        "summary": "Summary Patient reports moderate stomach pain for 2 hours with heaviness no worsening or medication Symptoms stomach pain heaviness Severity Moderate Advice Avoid heavy/spicy food stay hydrated rest If pain persists/worsens or vomiting occurs consult a doctor immediately",
+        "advice": "Consult a doctor immediately.",
+        "timestamp": "Sat Mar 21 11:09:26 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "i am having stomach pain since morning which doctor should i go to help me book an appointment for car",
+        "nlp_intents": [
+            "APPOINTMENT_BOOK"
+        ],
+        "nlp_entities": {
+            "symptoms": [],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": null,
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": "stomach"
+        },
+        "qa_pairs": "How is the pain? \u2192 it is\nWhen did it start? \u2192 morning\nIs it getting worse? \u2192 yes it is\nAny other symptoms? \u2192 no\nAny medicine taken? \u2192 no but i also haven't",
+        "summary": "Summary Stomach pain since morning worsening no other symptoms Symptoms stomach pain Severity Moderate Advice Consult a gastroenterologist",
+        "advice": "Consult a doctor immediately.",
+        "timestamp": "Sat Mar 21 11:24:15 2026"
+    },
+    {
+        "language": "hindi",
+        "raw_input": "\u0915\u0932 \u0930\u093e\u0924 \u0938\u0947 \u092e\u0947\u0930\u0940 \u091c\u094b \u0939\u093e\u0930\u094d\u091f\u092c\u0940\u091f \u0939\u0948 \u0915\u0947 \u092a\u093e\u0938 \u091c\u093e\u0928\u093e \u0915\u094c\u0928 \u0938\u0947 \u0921\u0949\u0915\u094d\u091f\u0930 \u0915\u0947 \u092a\u093e\u0938 \u0914\u0930 \u0915\u093f\u0938 \u091f\u093e\u0907\u092e \u0921\u0949\u0915\u094d\u091f\u0930 \u092b\u094d\u0930\u0940 \u0930\u0939\u0947\u0902\u0917\u0947 \u0925\u094b\u0921\u093c\u0940 \u0938\u0940 \u092c\u094d\u0930\u0940\u0926\u093f\u0902\u0917 \u092e\u0947\u0902",
+        "nlp_intents": [
+            "UNCERTAIN"
+        ],
+        "nlp_entities": {
+            "symptoms": [],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": null,
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": null
+        },
+        "qa_pairs": "\u0926\u0930\u094d\u0926 \u0915\u0948\u0938\u093e \u0939\u0948? \u2192 \u0926\u0930\u094d\u0926 \u0905\u092d\u0940 \u0926\u0930\u094d\u0926 \u0928\u0939\u0940\u0902\n\u092f\u0939 \u0915\u092c \u0936\u0941\u0930\u0942 \u0939\u0941\u0906? \u2192 \u0915\u0932 \u0930\u093e\u0924\n\u0915\u094d\u092f\u093e \u092f\u0939 \u092c\u0922\u093c \u0930\u0939\u093e \u0939\u0948? \u2192 \u0928\u0939\u0940\u0902\n\u0915\u094b\u0908 \u0905\u0928\u094d\u092f \u0932\u0915\u094d\u0937\u0923? \u2192 \u092c\u094d\u0930\u0940\u0926\u093f\u0902\u0917 \u092e\u0947\u0902\n\u0915\u094b\u0908 \u0926\u0935\u093e \u0932\u0940? \u2192 \u0928\u0939\u0940\u0902",
+        "summary": "Summary \u092a\u093f\u091b\u0932\u0947 \u0930\u093e\u0924 \u0938\u0947 \u0939\u0943\u0926\u092f \u0917\u0924\u093f \u092e\u0947\u0902 \u092c\u0926\u0932\u093e\u0935 \u0914\u0930 \u0938\u093e\u0902\u0938 \u0932\u0947\u0928\u0947 \u092e\u0947\u0902 \u0924\u0915\u0932\u0940\u092b \u0915\u0940 \u0938\u092e\u0938\u094d\u092f\u093e\u0964 Symptoms \u0938\u093e\u0902\u0938 \u0932\u0947\u0928\u0947 \u092e\u0947\u0902 \u0924\u0915\u0932\u0940\u092b Severity Low Advice \u0924\u0941\u0930\u0902\u0924 \u0928\u093f\u0915\u091f\u0924\u092e \u0939\u0943\u0926\u092f \u0930\u094b\u0917 \u0935\u093f\u0936\u0947\u0937\u091c\u094d\u091e \u0915\u093e\u0930\u094d\u0921\u093f\u092f\u094b\u0932\u0949\u091c\u093f\u0938\u094d\u091f \u0938\u0947 \u0938\u0932\u093e\u0939 \u0932\u0947\u0902 \u092f\u093e \u0906\u092a\u093e\u0924\u0915\u093e\u0932\u0940\u0928 \u0938\u0947\u0935\u093e\u0913\u0902 108/112 \u0938\u0947 \u0938\u0902\u092a\u0930\u094d\u0915 \u0915\u0930\u0947\u0902\u0964",
+        "advice": "Consult a doctor immediately.",
+        "timestamp": "Sat Mar 21 11:27:37 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "my heartbeat is kind of fast since last night and i am also having breathing problems which doctor should i go to help me book an appointment",
+        "nlp_intents": [
+            "SYMPTOM_REPORT",
+            "APPOINTMENT_BOOK"
+        ],
+        "nlp_entities": {
+            "symptoms": [],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": null,
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": null
+        },
+        "qa_pairs": "How is the pain? \u2192 who will the pain is\nWhen did it start? \u2192 last night 65 hours\nIs it getting worse? \u2192 actually the same\nAny other symptoms? \u2192 other than breathing\nAny medicine taken? \u2192 no i have",
+        "summary": "Summary not generated",
+        "advice": "Consult a doctor immediately.",
+        "timestamp": "Sat Mar 21 11:33:38 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "i am having breathing problem where is the cardiologist",
+        "nlp_intents": [
+            "DEPARTMENT_QUERY"
+        ],
+        "nlp_entities": {
+            "symptoms": [],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": null,
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": null
+        },
+        "qa_pairs": "How is the pain? \u2192 very pa\nWhen did it start? \u2192 morning\nIs it getting worse? \u2192 yes it is\nAny other symptoms? \u2192 just a little bit feeling heavy\nAny medicine taken? \u2192 no i have",
+        "summary": "Summary not generated",
+        "advice": "Consult a doctor immediately.",
+        "timestamp": "Sat Mar 21 11:52:35 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "i am having a severe severe headache last night which doctor should i can you help me book an appointment thank",
+        "nlp_intents": [
+            "APPOINTMENT_BOOK"
+        ],
+        "nlp_entities": {
+            "symptoms": [
+                "headache"
+            ],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": "severe",
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": null
+        },
+        "qa_pairs": "How is the pain? \u2192 is elevat\nWhen did it start? \u2192 last night\nIs it getting worse? \u2192 yes it is\nAny other symptoms? \u2192 donate\nAny medicine taken? \u2192 no no",
+        "summary": "Summary not generated",
+        "advice": "Consult a doctor immediately.",
+        "timestamp": "Sat Mar 21 12:05:20 2026"
+    }
+]

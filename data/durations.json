@@ -1,0 +1,9 @@
+{
+  "since_last_night": ["since last night", "kal raat se", "raat se"],
+  "since_yesterday": ["since yesterday", "kal se"],
+  "since_morning": ["since morning", "subah se"],
+  "for_few_days": ["few days", "kuch din se", "several days"],
+  "for_one_week": ["one week", "ek hafte se", "for a week"],
+  "for_two_weeks": ["two weeks", "do hafte se"],
+  "sudden": ["sudden", "achanak", "just started"]
+}

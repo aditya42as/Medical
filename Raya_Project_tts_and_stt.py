@@ -117,42 +117,63 @@ def text_to_speech(text, speed=1.0, volume=1.0, pitch=1.0, voice='female', langu
     os.unlink(temp_wav.name)
 
 
-def speech_to_text(timeout=5, phrase_limit=10, language='en-US', continuous=False):
+def speech_to_text(timeout=10, phrase_limit=10, language='en-US', continuous=False):
     recognizer = sr.Recognizer()
     results = []
 
     def listen_once():
-        with sr.Microphone() as source:
-            print("\nAdjusting for background noise...")
-            recognizer.adjust_for_ambient_noise(source, duration=1)
-            print("Listening... Speak now!")
-            try:
-                audio = recognizer.listen(source, timeout=timeout, phrase_time_limit=phrase_limit)
+        try:
+
+            with sr.Microphone(device_index=1, sample_rate=16000) as source:
+                print("\nAdjusting for background noise...")
+                recognizer.adjust_for_ambient_noise(source, duration=1)
+
+                print("Listening... Speak NOW!")
+
+                audio = recognizer.listen(
+                    source,
+                    timeout=None,                
+                    phrase_time_limit=phrase_limit
+                )
+
                 print("Recognizing speech...")
+
                 raw_text = recognizer.recognize_google(audio, language=language)
                 final_text = postprocess_from_stt(raw_text)
+
                 print(f'Recognized: "{final_text}"')
+
                 save_to_history(final_text)
                 return final_text
-            except sr.WaitTimeoutError:
-                print("No speech detected. Please try again.")
-            except sr.UnknownValueError:
-                print("Could not understand. Please speak clearly.")
-            except sr.RequestError as e:
-                print(f"Service error: {e}. Check your internet connection.")
-            return None
 
+        except sr.WaitTimeoutError:
+            print("No speech detected.")
+        except sr.UnknownValueError:
+            print("Could not understand audio.")
+        except sr.RequestError as e:
+            print(f"API Error: {e}")
+        except Exception as e:
+            print("STT ERROR:", e)
+
+        return None
+
+    # Single listen mode
     if not continuous:
         return listen_once()
 
+    # Continuous mode
     print("\nContinuous listening mode ON. Say 'stop listening' to exit.\n")
+
     while True:
         result = listen_once()
+
         if result:
             results.append(result)
+
             if 'stop listening' in result.lower():
                 print("Stopping continuous listening.")
                 break
+
     return results
 
 

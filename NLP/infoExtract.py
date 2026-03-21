@@ -1,187 +1,83 @@
+# NLP/infoExtract.py
 import json
 import re
 from rapidfuzz import fuzz
 from config.settings import FUZZY_MATCH_THRESHOLD, NEGATION_WORDS
 
-
 class InfoExtractor:
-
-    def __init__(self,
-                 symptom_path="data/symptoms.json",
-                 dept_path="data/departments.json"):
-
-        with open(symptom_path, encoding="utf-8") as f:
+    def __init__(self):
+        # Load everything from JSON files (ontology style)
+        with open("data/symptoms.json", encoding="utf-8") as f:
             self.symptoms = json.load(f)
-
-        with open(dept_path, encoding="utf-8") as f:
+        with open("data/departments.json", encoding="utf-8") as f:
             self.departments = json.load(f)
+        with open("data/durations.json", encoding="utf-8") as f:
+            self.durations = json.load(f)
+        with open("data/body_parts.json", encoding="utf-8") as f:
+            self.body_parts = json.load(f)
+        with open("data/severity.json", encoding="utf-8") as f:
+            self.severity_words = json.load(f)
+        with open("data/date_time_words.json", encoding="utf-8") as f:
+            self.date_words = json.load(f)
 
-       
-        self.severity_words = {
-            "mild": ["thoda", "slight", "mild"],
-            "severe": ["bahut", "zyada", "severe"]
-        }
-
-       
-        self.duration_patterns = [
-            r"\d+\s+din\s+se",
-            r"\d+\s+hours?",
-            r"\d+\s+days?",
-            r"kal\s+se",
-            r"subah\s+se",
-            r"raat\s+se"
-        ]
-
-       
-        self.date_words = [
-            "aaj",
-            "kal",
-            "parso",
-            "today",
-            "tomorrow"
-        ]
-
-        
         self.time_pattern = r"\b(\d{1,2}\s?(am|pm|baje))\b"
 
-        
-        self.body_parts = {
-            "head": ["sar", "sir", "head"],
-            "chest": ["chest"],
-            "stomach": ["pet", "stomach"],
-            "throat": ["gala", "throat"]
-        }
-
     def fuzzy_match(self, tokens, dictionary):
-
         matches = []
-
         for i, token in enumerate(tokens):
-
             for key, variants in dictionary.items():
-
                 for v in variants:
-
                     if fuzz.ratio(token, v) >= FUZZY_MATCH_THRESHOLD:
                         matches.append((key, i))
-
         return matches
 
     def is_negated(self, tokens, index):
-
-        
-        window = 3
-
-        start = max(0, index - window)
-        end = min(len(tokens), index + window)
-
-        context = tokens[start:end]
-
-        for word in context:
-
-            if word in NEGATION_WORDS:
-                return True
-
-        return False
+        window = tokens[max(0, index-4):index+4]
+        return any(word in NEGATION_WORDS for word in window)
 
     def detect_duration(self, text):
-
-        for pattern in self.duration_patterns:
-
-            match = re.search(pattern, text)
-
-            if match:
-                return match.group()
-
-        return None
-
-    def detect_date(self, tokens):
-
-        for token in tokens:
-
-            if token in self.date_words:
-                return token
-
-        return None
-
-    def detect_time(self, text):
-
-        match = re.search(self.time_pattern, text)
-
-        if match:
-            return match.group()
-
-        return None
-
-    def detect_severity(self, tokens):
-
-        for level, words in self.severity_words.items():
-
-            for word in words:
-
-                if word in tokens:
-                    return level
-
-        return None
-
-    def detect_body_part(self, tokens):
-
-        for part, words in self.body_parts.items():
-
-            for word in words:
-
-                if word in tokens:
-                    return part
-
+        text = text.lower()
+        for key, variants in self.durations.items():
+            for v in variants:
+                if v in text:
+                    return key.replace("_", " ")
         return None
 
     def extract(self, text):
-
-        tokens = text.split()
-
+        tokens = text.lower().split()
         entities = {
-
-            "symptoms": [],
-            "negatedSymptoms": [],
-            "departments": [],
-            "severity": None,
-            "duration": None,
-            "date": None,
-            "time": None,
-            "bodyPart": None
+            "symptoms": [], "negatedSymptoms": [], "departments": [],
+            "severity": None, "duration": None, "date": None,
+            "time": None, "bodyPart": None
         }
 
-        
-        symptom_matches = self.fuzzy_match(tokens, self.symptoms)
-
-        for symptom, idx in symptom_matches:
-
+        # Symptoms
+        for sym, idx in self.fuzzy_match(tokens, self.symptoms):
             if self.is_negated(tokens, idx):
-                entities["negatedSymptoms"].append(symptom)
+                entities["negatedSymptoms"].append(sym)
             else:
-                entities["symptoms"].append(symptom)
+                entities["symptoms"].append(sym)
 
-       
-        dept_matches = self.fuzzy_match(tokens, self.departments)
+        # Body Part
+        for part, idx in self.fuzzy_match(tokens, self.body_parts):
+            entities["bodyPart"] = part
 
-        for dept, _ in dept_matches:
-            entities["departments"].append(dept)
+        # Severity
+        for level, words in self.severity_words.items():
+            if any(w in tokens for w in words):
+                entities["severity"] = level
+                break
 
-        
-        entities["severity"] = self.detect_severity(tokens)
-
+        # Duration, Date, Time
         entities["duration"] = self.detect_duration(text)
+        entities["date"] = next((t for t in tokens if t in self.date_words), None)
 
-        entities["date"] = self.detect_date(tokens)
+        match = re.search(self.time_pattern, text)
+        if match:
+            entities["time"] = match.group()
 
-        entities["time"] = self.detect_time(text)
-
-        entities["bodyPart"] = self.detect_body_part(tokens)
-
-        entities["symptoms"] = list(set(entities["symptoms"]))
-
-        entities["negatedSymptoms"] = list(set(entities["negatedSymptoms"]))
-
-        entities["departments"] = list(set(entities["departments"]))
+        # Deduplicate
+        for k in ["symptoms", "negatedSymptoms", "departments"]:
+            entities[k] = list(set(entities[k]))
 
         return entities

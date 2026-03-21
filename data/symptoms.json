@@ -1,176 +1,31 @@
 {
-  "fever": [
-    "fever","bukhar","temperature","high fever","body temperature",
-    "feverish","running fever","body heat","high temperature"
-  ],
-
-  "cough": [
-    "cough","khansi","khasi","dry cough","wet cough",
-    "persistent cough","continuous cough"
-  ],
-
-  "cold": [
-    "cold","sardi","runny nose","blocked nose","stuffy nose",
-    "nasal congestion","cold symptoms"
-  ],
-
-  "headache": [
-    "headache","head pain","head ache","sar dard","sir dard",
-    "pain in head","migraine","head pressure"
-  ],
-
-  "dizziness": [
-    "dizziness","dizzy","lightheaded","lightheadedness",
-    "chakkar","feeling dizzy"
-  ],
-
-  "fatigue": [
-    "fatigue","weakness","weak","very tired",
-    "low energy","body weakness","thakan"
-  ],
-
-  "body_pain": [
-    "body pain","body ache","body hurting",
-    "muscle pain","muscle ache"
-  ],
-
-  "breathing_difficulty": [
-    "breathing problem","breathing difficulty","breath problem",
-    "shortness of breath","breathless","cannot breathe",
-    "hard to breathe","saans problem","saans lene"
-  ],
-
-  "chest_pain": [
-    "chest pain","pain in chest","chest hurting",
-    "tight chest","chest pressure","heart pain"
-  ],
-
-  "palpitations": [
-    "heart racing","fast heartbeat","palpitations",
-    "heart beating fast","irregular heartbeat"
-  ],
-
-  "stomach_pain": [
-    "stomach pain","stomach ache","pet dard",
-    "abdominal pain","belly pain","stomach cramps"
-  ],
-
-  "vomiting": [
-    "vomit","vomiting","throwing up","ulti",
-    "nausea","nauseous","feeling like vomiting"
-  ],
-
-  "diarrhea": [
-    "diarrhea","loose motion","loose motions",
-    "frequent stool","watery stool"
-  ],
-
-  "constipation": [
-    "constipation","hard stool","difficulty passing stool"
-  ],
-
-  "sore_throat": [
-    "sore throat","throat pain","throat irritation",
-    "gala dard","gala kharab"
-  ],
-
-  "swallowing_difficulty": [
-    "difficulty swallowing","pain while swallowing",
-    "cannot swallow","swallowing problem"
-  ],
-
-  "ear_pain": [
-    "ear pain","ear ache","pain in ear",
-    "ear hurting"
-  ],
-
-  "ear_discharge": [
-    "ear discharge","fluid from ear","ear leaking"
-  ],
-
-  "vision_problem": [
-    "blurred vision","vision problem","cannot see clearly",
-    "blurry vision"
-  ],
-
-  "eye_pain": [
-    "eye pain","pain in eye","burning eyes",
-    "eye irritation"
-  ],
-
-  "eye_redness": [
-    "red eyes","eye redness","eyes red"
-  ],
-
-  "skin_rash": [
-    "skin rash","rash","red rash",
-    "skin irritation"
-  ],
-
-  "itching": [
-    "itching","itchy skin","skin itching","khujli"
-  ],
-
-  "burning_urination": [
-    "burning urination","painful urination",
-    "burning while peeing"
-  ],
-
-  "frequent_urination": [
-    "frequent urination","urinating frequently",
-    "peeing frequently"
-  ],
-
-  "back_pain": [
-    "back pain","lower back pain",
-    "pain in back","spine pain"
-  ],
-
-  "joint_pain": [
-    "joint pain","knee pain","shoulder pain",
-    "joint ache"
-  ],
-
-  "swelling": [
-    "swelling","body swelling",
-    "swollen area","inflammation"
-  ],
-
-  "bleeding": [
-    "bleeding","blood loss","bleeding heavily"
-  ],
-
-  "numbness": [
-    "numbness","tingling","pins and needles"
-  ],
-
-  "seizure": [
-    "seizure","fits","convulsions"
-  ],
-
-  "confusion": [
-    "confusion","disoriented","memory problem"
-  ],
-
-  "weight_loss": [
-    "weight loss","losing weight unintentionally"
-  ],
-
-  "weight_gain": [
-    "weight gain","gaining weight quickly"
-  ],
-
-  "sleep_problem": [
-    "sleep problem","insomnia","difficulty sleeping",
-    "cannot sleep"
-  ],
-
-  "anxiety": [
-    "anxiety","panic","panic attack",
-    "feeling anxious"
-  ],
-
-  "depression": [
-    "depression","feeling depressed","low mood"
-  ]
+  "fever": ["fever", "bukhar", "tez bukhar", "taap", "body temperature high", "jalan bukhar", "bukhār", "तेज बुखार", "बुखार"],
+  "cough": ["cough", "khansi", "khaansi", "sukhi khansi", "geeli khansi", "persistent cough", "खांसी", "सूखी खांसी", "गीली खांसी"],
+  "cold": ["cold", "jukam", "zukaam", "sardi", "naak behna", "blocked nose", "runny nose", "जुकाम", "सर्दी"],
+  "headache": ["headache", "sar dard", "sir dard", "sirdard", "sar mein dard", "sir mein dard", "sar bhari", "head pain", "सिर दर्द", "सर दर्द", "सर भारी"],
+  "dizziness": ["dizziness", "chakkar", "chakkar aana", "lightheaded", "sir ghumna", "चक्कर", "चक्कर आना"],
+  "fatigue": ["fatigue", "thakan", "bahut thakawat", "kamzori", "body weakness", "सुस्ती", "थकान", "कमजोरी"],
+  "body_pain": ["body pain", "body ache", "sharir dard", "jism dard", "muscle pain", "शरीर दर्द"],
+  "breathing_difficulty": ["breathing difficulty", "breathing problem", "saans lene mein dikkat", "saans phoolna", "dam ghutna", "shortness of breath", "सांस फूलना", "सांस लेने में तकलीफ"],
+  "chest_pain": ["chest pain", "seene mein dard", "chest dard", "seena dab raha", "heart pain", "सीने में दर्द"],
+  "stomach_pain": ["stomach pain", "pet dard", "abdominal pain", "pet mein dard", "belly pain", "पेट दर्द"],
+  "vomiting": ["vomiting", "ulti", "jeebh ulti", "nausea", "throwing up", "उल्टी", "जी मिचलाना"],
+  "diarrhea": ["diarrhea", "dast", "loose motion", "patla dast", "दस्त", "लूज मोशन"],
+  "sore_throat": ["sore throat", "gale mein kharash", "gala kharab", "throat pain", "गले में खराश"],
+  "back_pain": ["back pain", "kamar dard", "peeth dard", "lower back pain", "कमर दर्द"],
+  "joint_pain": ["joint pain", "jodon mein dard", "ghutne dard", "knee pain", "जोड़ों में दर्द"],
+  "swelling": ["swelling", "soojan", "sujen", "inflammation", "सूजन"],
+  "rash": ["rash", "daane", "lal daane", "skin rash", "खुजली वाले दाने"],
+  "itching": ["itching", "khujli", "skin itching", "खुजली"],
+  "eye_pain": ["eye pain", "aankh dard", "aankhon mein dard", "burning eyes", "आंख दर्द"],
+  "blurred_vision": ["blurred vision", "dhundla dikhai", "vision blurry", "धुंधला दिखाई"],
+  "ear_pain": ["ear pain", "kaan dard", "ear ache", "कान दर्द"],
+  "toothache": ["toothache", "daant dard", "daant mein dard", "दांत दर्द"],
+  "acidity": ["acidity", "pet mein jalan", "gas", "khatti dakar", "खट्टी डकार"],
+  "high_bp": ["high blood pressure", "bp high", "blood pressure high"],
+  "low_bp": ["low blood pressure", "bp low"],
+  "insomnia": ["insomnia", "neend nahi aa rahi", "sleep problem", "नींद नहीं आ रही"],
+  "anxiety": ["anxiety", "ghabrahat", "tension", "panic", "घबराहट"],
+  "depression": ["depression", "udasi", "low mood", "उदासी"],
+  "weight_loss": ["weight loss", "wazan kam hona", "losing weight", "वजन कम होना"]
 }

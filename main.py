@@ -1,76 +1,122 @@
-from voice.voice_handler import speak, listen
+# main.py
+import time
+import sys
+import re
+from voice.voice_handler import speak, listen, get_language_choice, long_description_listen
 from ai.question_flow import generate_questions, final_analysis
 from core.pipeline import NPipeline
-from database.db import save_patient
 from emergency.emergency_handler import handle_emergency
+from database.db import save_patient
 
-def get_language():
-    speak("Choose your language. Say Hindi or English")
-    lang = listen(5).lower()
-
-    if "hindi" in lang:
-        return ("Hindi", "hi", "hi-IN")
-    return ("English", "en", "en-US")
-
-
-def ask_questions(q_text, lang_code):
-    questions = [q.strip() for q in q_text.split("\n") if q.strip()]
-    answers = []
-
-    for q in questions:
-        speak(q, lang_code)
-        ans = listen(10, lang_code)
-        answers.append((q, ans))
-
-    return answers
-
+sys.stdout.reconfigure(encoding='utf-8')
 
 def main():
-    speak("Welcome to RAYA Health Assistant")
+    print("RAYA starting...")
 
-    language, tts_lang, stt_lang = get_language()
+    lang_name, tts_lang, stt_lang = get_language_choice()
+    is_hindi = lang_name == 'hindi'
 
-    speak("Please describe your problem")
-    user_text = listen(30, stt_lang)
+    while True:
+        prompt = "आपके पास अपनी समस्या विस्तार से बताने के लिए 30 सेकंड हैं। बोलते रहें, बीच में रुकें तो भी जारी रखें। अब शुरू करें।" if is_hindi else "You have 30 seconds to describe your problem in detail. Keep speaking even with pauses. Start now."
+        speak(prompt, tts_lang)
 
-    if not user_text:
-        speak("I could not understand. Try again.")
-        return
+        user_text = long_description_listen(lang_code=stt_lang, max_duration=35)
 
-   
-    nlp = NPipeline()
-    nlp_result = nlp.process(user_text)
+        if not user_text:
+            speak("मैंने कुछ नहीं सुना। कृपया दोबारा बताएं।" if is_hindi else "I didn't hear anything. Please try again.", tts_lang)
+            continue
 
-    print("\nNLP RESULT:\n", nlp_result)
+        processed_text = user_text
 
-    
-    if handle_emergency(user_text):
-        speak("Emergency detected. Help is on the way.", tts_lang)
-        return
+        if handle_emergency(processed_text):
+            speak("आपातकाल पता चला! मदद बुलाई जा रही है।" if is_hindi else "Emergency detected! Help is on the way.", tts_lang)
+            time.sleep(8)
+            continue
 
-    speak("Analyzing your condition", tts_lang)
-    q_text = generate_questions(user_text, language)
+        nlp = NPipeline()
+        nlp_result = nlp.process(processed_text)
 
-    print("\nQuestions:\n", q_text)
+        speak("विश्लेषण कर रहा हूँ... एक पल रुकें।" if is_hindi else "Analyzing... One moment.", tts_lang)
 
-    answers = ask_questions(q_text, stt_lang)
+        questions_text = generate_questions(processed_text, lang_name, nlp_result['entities'])
+        questions = [re.sub(r'^\d+[\.\)]\s*', '', line.strip()) for line in questions_text.split('\n') if line.strip()]
+        questions = [q for q in questions if len(q) > 5][:5]
 
-    qa_pairs = "\n".join([f"{q} -> {a}" for q, a in answers])
-    speak("Processing your answers", tts_lang)
-    final_result = final_analysis(user_text, qa_pairs, language)
+        if len(questions) < 3:
+            questions = ["दर्द कैसा है?", "यह कब शुरू हुआ?", "क्या यह बढ़ रहा है?", "कोई अन्य लक्षण?", "कोई दवा ली?"] if is_hindi else ["How is the pain?", "When did it start?", "Is it getting worse?", "Any other symptoms?", "Any medicine taken?"]
 
-    speak("Here is your result", tts_lang)
-    print("\n===== FINAL RESULT =====\n")
-    print(final_result)
-    speak(final_result, tts_lang)
+        speak("मैं पाँच सवाल पूछ रहा हूँ। एक-एक करके जवाब दें।" if is_hindi else "I have five questions. Answer one by one.", tts_lang)
 
-    save_patient({
-        "input": user_text,
-        "nlp": nlp_result,
-        "qa": qa_pairs,
-        "final": final_result
-    })
+        answers = []
+        for q in questions:
+            speak(q, tts_lang)
+            time.sleep(0.8)
+            ans = listen(timeout=22, phrase_limit=18, lang_code=stt_lang)
+            answers.append((q, ans if ans else "कोई जवाब नहीं" if is_hindi else "no answer"))
 
+        qa_pairs = "\n".join([f"{q} → {a}" for q, a in answers])
+
+        speak("आपके जवाबों को प्रोसेस कर रहा हूँ..." if is_hindi else "Processing your answers...", tts_lang)
+        final_raw = final_analysis(processed_text, qa_pairs, lang_name, nlp_result['entities'])
+
+        # Strong cleaning + parsing
+        final_raw = re.sub(r'<think>.*?</think>', '', final_raw, flags=re.DOTALL | re.IGNORECASE)
+
+        # Robust splitting for Summary and Advice
+        summary_part = "Summary not generated"
+        advice_part = "Consult a doctor immediately."
+
+        if "Summary:" in final_raw and "Advice:" in final_raw:
+            summary_part = final_raw.split("Advice:")[0].replace("Summary:", "").strip()
+            advice_part = final_raw.split("Advice:")[-1].strip()
+        elif "Summary:" in final_raw:
+            summary_part = final_raw.split("Summary:")[-1].strip()
+        elif "Advice:" in final_raw:
+            advice_part = final_raw.split("Advice:")[-1].strip()
+
+        # === FINAL CLEAN REPORT ===
+        print("\n" + "═" * 80)
+        print("RAYA MEDICAL REPORT")
+        print("═" * 80)
+        print(f"Language     : {lang_name.upper()}")
+        print(f"Date & Time  : {time.ctime()}")
+        print(f"Intents      : {', '.join(nlp_result.get('intent', ['UNKNOWN']))}")
+        print(f"Raw Input    : {user_text[:130]}..." if len(user_text) > 130 else user_text)
+        print("-" * 80)
+        print("NLP DETECTED:")
+        print(f"  • Symptoms   : {', '.join(nlp_result['entities']['symptoms']) or 'None'}")
+        print(f"  • Body Part  : {nlp_result['entities']['bodyPart'] or 'Not detected'}")
+        print(f"  • Severity   : {nlp_result['entities'].get('severity', 'Unknown')}")
+        print(f"  • Confidence : {nlp_result['confidence']:.1%}")
+        print("-" * 80)
+        print("SUMMARY:")
+        print(summary_part)
+        print("-" * 80)
+        print("ADVICE:")
+        print(advice_part)
+        print("═" * 80)
+
+        speak("यहाँ सारांश है।" if is_hindi else "Here is the summary.", tts_lang)
+        speak(summary_part, tts_lang)
+        speak("सलाह:" if is_hindi else "Advice:", tts_lang)
+        speak(advice_part, tts_lang)
+
+        save_patient({
+            "language": lang_name,
+            "raw_input": user_text,
+            "nlp_intents": nlp_result.get('intent', ['UNKNOWN']),
+            "nlp_entities": nlp_result["entities"],
+            "qa_pairs": qa_pairs,
+            "summary": summary_part,
+            "advice": advice_part,
+            "timestamp": time.ctime()
+        })
+
+        speak("धन्यवाद। नया केस शुरू करने के लिए 'again' बोलें।" if is_hindi else "Thank you. Say 'again' for new case.", tts_lang)
+
+        if 'again' not in listen(timeout=12, lang_code=stt_lang).lower():
+            speak("अलविदा।" if is_hindi else "Goodbye.", tts_lang)
+            break
 
 if __name__ == "__main__":
     main()

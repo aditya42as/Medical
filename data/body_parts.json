@@ -1,0 +1,11 @@
+{
+  "head": ["sar", "sir", "head", "sirdard", "sar mein"],
+  "chest": ["chest", "seena", "seene mein"],
+  "stomach": ["pet", "stomach", "belly", "abdominal"],
+  "throat": ["gala", "throat", "gale mein"],
+  "back": ["back", "kamar", "peeth"],
+  "eyes": ["aankh", "eyes", "aankhon mein"],
+  "ears": ["kaan", "ear", "ears"],
+  "legs": ["legs", "taange", "pair"],
+  "hands": ["hands", "haath"]
+}

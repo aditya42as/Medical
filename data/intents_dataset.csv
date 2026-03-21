@@ -560,3 +560,102 @@ this response seems wrong,UNKNOWN
 something is incorrect,UNKNOWN
 this output confuses me,UNKNOWN
 i am not sure what this means,UNKNOWN
+i am having severe headache please book doctor appointment,APPOINTMENT_BOOK
+mujhe bukhar hai aur doctor se milna hai,APPOINTMENT_BOOK
+sar dard ho raha hai appointment book kar do,APPOINTMENT_BOOK
+stomach pain hai doctor appointment chahiye,APPOINTMENT_BOOK
+headache and want to book appointment with neurologist,APPOINTMENT_BOOK
+pet dard aur sir dard hai appointment fix kar do,APPOINTMENT_BOOK
+i feel feverish can you help book doctor,APPOINTMENT_BOOK
+chest pain since morning book appointment please,APPOINTMENT_BOOK
+mujhe chakkar aa rahe hain aur doctor se milna hai,APPOINTMENT_BOOK
+having breathing problem want to see doctor,APPOINTMENT_BOOK
+sir mein dard hai kal se appointment karwa do,APPOINTMENT_BOOK
+stomach ache and need doctor consultation,APPOINTMENT_BOOK
+bukhar aur khansi hai doctor appointment chahiye,APPOINTMENT_BOOK
+headache with vomiting please book appointment,APPOINTMENT_BOOK
+i have body pain and want to meet doctor,APPOINTMENT_BOOK
+dizziness ho rahi hai appointment book karo,APPOINTMENT_BOOK
+severe headache since yesterday book doctor,APPOINTMENT_BOOK
+pet dard ho raha hai doctor se baat karni hai,APPOINTMENT_BOOK
+i feel very weak please help book appointment,APPOINTMENT_BOOK
+headache aur chakkar aa rahe hain appointment chahiye,APPOINTMENT_BOOK 
+i am having severe headache please book doctor appointment,APPOINTMENT_BOOK
+mujhe bukhar hai aur doctor appointment book kar do,APPOINTMENT_BOOK
+sar dard ho raha hai kal se appointment book kar do,APPOINTMENT_BOOK
+stomach pain hai doctor appointment chahiye,APPOINTMENT_BOOK
+headache since yesterday can you help book appointment,APPOINTMENT_BOOK
+pet dard aur sir dard hai appointment fix kar do,APPOINTMENT_BOOK
+i feel feverish and want to book doctor,APPOINTMENT_BOOK
+chest pain since morning please book appointment,APPOINTMENT_BOOK
+mujhe chakkar aa rahe hain doctor appointment book kar do,APPOINTMENT_BOOK
+having breathing problem want to see doctor,APPOINTMENT_BOOK
+sir mein dard hai kal se appointment karwa do,APPOINTMENT_BOOK
+stomach ache and need doctor consultation,APPOINTMENT_BOOK
+bukhar aur khansi hai doctor appointment chahiye,APPOINTMENT_BOOK
+headache with vomiting please book appointment,APPOINTMENT_BOOK
+i have body pain and want to meet doctor,APPOINTMENT_BOOK
+dizziness ho rahi hai appointment book karo,APPOINTMENT_BOOK
+severe headache since yesterday book doctor,APPOINTMENT_BOOK
+pet dard ho raha hai doctor se baat karni hai,APPOINTMENT_BOOK
+i feel very weak please help book appointment,APPOINTMENT_BOOK
+headache aur chakkar aa rahe hain appointment chahiye,APPOINTMENT_BOOK
+i have severe headache but I want to cancel my appointment,APPOINTMENT_CANCEL
+mujhe bukhar hai lekin appointment cancel kar do,APPOINTMENT_CANCEL
+sar dard ho raha hai appointment cancel karna hai,APPOINTMENT_CANCEL
+stomach pain hai appointment cancel kar do,APPOINTMENT_CANCEL
+headache with fever cancel my doctor appointment,APPOINTMENT_CANCEL
+pet dard aur appointment cancel kar do,APPOINTMENT_CANCEL
+i have headache can you reschedule my appointment,APPOINTMENT_RESCHEDULE
+mujhe bukhar hai appointment reschedule kar do,APPOINTMENT_RESCHEDULE
+sir dard ho raha hai appointment ko kal kar do,APPOINTMENT_RESCHEDULE
+stomach ache hai appointment time change kar do,APPOINTMENT_RESCHEDULE
+where is neurology department I have headache,DEPARTMENT_QUERY
+sar dard hai neurology department kahan hai,DEPARTMENT_QUERY
+headache hai doctor ka department batao,DEPARTMENT_QUERY
+stomach pain hai gastroenterology department kahan hai,DEPARTMENT_QUERY
+where is cardiology I have chest pain,DEPARTMENT_QUERY
+doctor availability today I have stomach pain,DOCTOR_QUERY
+doctor visiting hours kya hain mujhe bukhar hai,DOCTOR_QUERY
+doctor ka time batao sar dard ho raha hai,DOCTOR_QUERY
+when can I meet doctor for headache,DOCTOR_QUERY
+thank you very much for the help with my headache,GENERAL_QUERY
+appreciate your help with my symptoms,GENERAL_QUERY
+thanks a lot for the advice,GENERAL_QUERY
+bahut shukriya aapki madad ke liye,GENERAL_QUERY
+i don't understand what you said about my headache,UNKNOWN
+this response seems wrong about my stomach pain,UNKNOWN
+something is not right with the advice,UNKNOWN
+ye kya bol raha hai samajh nahi aa raha,UNKNOWN
+i feel feverish, SYMPTOM_REPORT
+mujhe bukhar lag raha hai, SYMPTOM_REPORT
+sar dard ho raha hai, SYMPTOM_REPORT
+stomach pain since morning, SYMPTOM_REPORT
+chest pain ho raha hai, SYMPTOM_REPORT
+i am having severe headache and want to book appointment,APPOINTMENT_BOOK
+mujhe bukhar hai aur doctor appointment book kar do,APPOINTMENT_BOOK
+sar dard ho raha hai kal se appointment chahiye,APPOINTMENT_BOOK
+stomach pain hai please book doctor appointment,APPOINTMENT_BOOK
+headache and stomach pain book appointment,APPOINTMENT_BOOK
+mujhe pet dard hai doctor se milna hai,APPOINTMENT_BOOK
+i have chest pain can you book appointment,APPOINTMENT_BOOK
+sar mein dard hai appointment fix kar do,APPOINTMENT_BOOK
+bukhar aur khansi hai doctor appointment chahiye,APPOINTMENT_BOOK
+i feel dizzy please help book doctor,APPOINTMENT_BOOK
+pet dard ho raha hai appointment karwa do,APPOINTMENT_BOOK
+headache with vomiting book appointment,APPOINTMENT_BOOK
+mujhe bukhar hai lekin appointment cancel kar do,APPOINTMENT_CANCEL
+sar dard hai appointment cancel karna hai,APPOINTMENT_CANCEL
+stomach pain hai appointment cancel kar do,APPOINTMENT_CANCEL
+i have headache can you reschedule my appointment,APPOINTMENT_RESCHEDULE
+mujhe pet dard hai appointment time change kar do,APPOINTMENT_RESCHEDULE
+where is neurology department I have headache,DEPARTMENT_QUERY
+sar dard hai neuro department kahan hai,DEPARTMENT_QUERY
+stomach pain hai gastro department kahan hai,DEPARTMENT_QUERY
+doctor availability today I have fever,DOCTOR_QUERY
+doctor ka time batao mujhe bukhar hai,DOCTOR_QUERY
+thank you for the advice,GENERAL_QUERY
+bahut shukriya aapki madad ke liye,GENERAL_QUERY
+i don't understand what you said,UNKNOWN
+ye kya bol raha hai samajh nahi aa raha,UNKNOWN
+this response seems wrong,UNKNOWN
