@@ -1,4 +1,3 @@
-# NLP/infoExtract.py
 import json
 import re
 from rapidfuzz import fuzz
@@ -6,7 +5,6 @@ from config.settings import FUZZY_MATCH_THRESHOLD, NEGATION_WORDS
 
 class InfoExtractor:
     def __init__(self):
-        # Load everything from JSON files (ontology style)
         with open("data/symptoms.json", encoding="utf-8") as f:
             self.symptoms = json.load(f)
         with open("data/departments.json", encoding="utf-8") as f:

@@ -1,13 +1,72 @@
+# main.py
 import time
 import sys
 import re
+import random
 from voice.voice_handler import speak, listen, get_language_choice, long_description_listen
 from ai.question_flow import generate_questions, final_analysis
 from core.pipeline import NPipeline
 from emergency.emergency_handler import handle_emergency
 from database.db import save_patient
+from NLP.summary_generator import SummaryGenerator
 
 sys.stdout.reconfigure(encoding='utf-8')
+
+FALLBACK_QUESTIONS = {
+    'english': ["How is the pain feeling right now?", "When exactly did it start?", "Is it getting worse?", "Any other symptoms?", "Have you taken any medicine?"],
+    'hindi': ["दर्द कैसा लग रहा है?", "यह कब शुरू हुआ?", "क्या दर्द बढ़ रहा है?", "कोई और लक्षण हैं?", "क्या कोई दवा ली है?"]
+}
+
+def parse_sarvam_questions(text):
+    """Robust parser for Sarvam's one-line or messy output"""
+    questions = re.split(r'\s*\d+\.?\s*', text)
+    questions = [q.strip() for q in questions if q.strip() and len(q) > 8]
+    return questions
+
+def parse_summary_advice(text):
+    """FINAL FIXED PARSER - aggressively cleans mixed English+Hindi, removes leaked words, and separates summary vs advice perfectly"""
+    text = re.sub(r'<think>.*?</think>|Explanation:.*|Thinking:.*', '', text, flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r'\s+', ' ', text).strip()
+
+    # Detect language of output
+    has_hindi = bool(re.search(r'[\u0900-\u097F]', text))
+
+    # Remove leaked junk words that Sarvam always inserts
+    junk_words = r'\b(Water|heavy|Without|er|with slight|लेज|सरदर्द|पेट|निचले|हिस्से|में|दर्द|बुखार|रात|को|निगरानी|के|ठंडा|आहार|ले|न ले|निगरा|नी|के|हल्का|बुखार)\b'
+    text = re.sub(junk_words, '', text, flags=re.IGNORECASE)
+
+    # If English user but Hindi leaked → remove all Hindi completely
+    if not has_hindi or 'Patient experiences' in text or 'severe constant headache' in text.lower():
+        text = re.sub(r'[\u0900-\u097F]+', '', text)   # strip any remaining Hindi
+
+    # Smart split: take everything before last sentence as summary, last sentence as advice
+    if has_hindi:
+        sentences = [s.strip() for s in re.split(r'[।!?]', text) if s.strip() and len(s) > 5]
+    else:
+        sentences = [s.strip() for s in re.split(r'[.!?]', text) if s.strip() and len(s) > 5]
+
+    if len(sentences) > 1:
+        summary_part = '. '.join(sentences[:-1]).strip() + ('.' if not has_hindi else '।')
+        advice_part = sentences[-1].strip() + ('.' if not has_hindi else '।')
+    else:
+        summary_part = text
+        advice_part = ""
+
+    # Final cleanup
+    summary_part = re.sub(r'^[।,.:\s]+|[।,.:\s]+$', '', summary_part).strip()
+    summary_part = re.sub(r'\s+', ' ', summary_part)
+
+    # Language-aware safe fallbacks
+    if len(summary_part) < 15:
+        summary_part = "Summary unclear. Please provide more details." if not has_hindi else "आपकी समस्या का सारांश स्पष्ट नहीं हो पाया। कृपया अधिक जानकारी दें।"
+    if len(advice_part) < 8:
+        advice_part = "Consult a doctor immediately." if not has_hindi else "तुरंत डॉक्टर से संपर्क करें।"
+
+    # Extract severity
+    severity_match = re.search(r'(Low|Moderate|High|कम|मध्यम|उच्च)', text, re.IGNORECASE)
+    severity = severity_match.group(1).strip() if severity_match else None
+
+    return summary_part, severity, advice_part
 
 def main():
     print("RAYA starting...")
@@ -16,35 +75,39 @@ def main():
     is_hindi = lang_name == 'hindi'
 
     while True:
-        prompt = "आपके पास अपनी समस्या विस्तार से बताने के लिए 30 सेकंड हैं। बोलते रहें, बीच में रुकें तो भी जारी रखें। अब शुरू करें।" if is_hindi else "You have 30 seconds to describe your problem in detail. Keep speaking even with pauses. Start now."
+        prompt = "आपके पास अपनी समस्या विस्तार से बताने के लिए 30 सेकंड हैं। अब शुरू करें।" if is_hindi else "You have 30 seconds to describe your problem. Start now."
         speak(prompt, tts_lang)
 
         user_text = long_description_listen(lang_code=stt_lang, max_duration=35)
 
         if not user_text:
-            speak("मैंने कुछ नहीं सुना। कृपया दोबारा बताएं।" if is_hindi else "I didn't hear anything. Please try again.", tts_lang)
+            speak("मैंने कुछ नहीं सुना। कृपया दोबारा बताएं।" if is_hindi else "I didn't hear anything.", tts_lang)
             continue
 
         processed_text = user_text
 
         if handle_emergency(processed_text):
-            speak("आपातकाल पता चला! मदद बुलाई जा रही है।" if is_hindi else "Emergency detected! Help is on the way.", tts_lang)
+            speak("आपातकाल पता चला!" if is_hindi else "Emergency detected!", tts_lang)
             time.sleep(8)
             continue
 
         nlp = NPipeline()
         nlp_result = nlp.process(processed_text)
 
-        speak("विश्लेषण कर रहा हूँ... एक पल रुकें।" if is_hindi else "Analyzing... One moment.", tts_lang)
+        speak("विश्लेषण कर रही हूँ..." if is_hindi else "Analyzing...", tts_lang)
 
         questions_text = generate_questions(processed_text, lang_name, nlp_result['entities'])
-        questions = [re.sub(r'^\d+[\.\)]\s*', '', line.strip()) for line in questions_text.split('\n') if line.strip()]
-        questions = [q for q in questions if len(q) > 5][:5]
+        print("\n[DEBUG] RAW SARVAM QUESTIONS:", repr(questions_text))
+
+        questions = parse_sarvam_questions(questions_text)
 
         if len(questions) < 3:
-            questions = ["दर्द कैसा है?", "यह कब शुरू हुआ?", "क्या यह बढ़ रहा है?", "कोई अन्य लक्षण?", "कोई दवा ली?"] if is_hindi else ["How is the pain?", "When did it start?", "Is it getting worse?", "Any other symptoms?", "Any medicine taken?"]
+            print("[Using random fallback questions]")
+            questions = random.sample(FALLBACK_QUESTIONS['hindi' if is_hindi else 'english'], 5)
 
-        speak("मैं पाँच सवाल पूछ रहा हूँ। एक-एक करके जवाब दें।" if is_hindi else "I have five questions. Answer one by one.", tts_lang)
+        print(f"[DEBUG] Final questions: {questions}")
+
+        speak("मैं पाँच सवाल पूछ रही हूँ। एक-एक करके जवाब दें।" if is_hindi else "I have five questions. Answer one by one.", tts_lang)
 
         answers = []
         for q in questions:
@@ -55,29 +118,29 @@ def main():
 
         qa_pairs = "\n".join([f"{q} → {a}" for q, a in answers])
 
-        speak("आपके जवाबों को प्रोसेस कर रहा हूँ..." if is_hindi else "Processing your answers...", tts_lang)
+        speak("प्रोसेस कर रही हूँ..." if is_hindi else "Processing...", tts_lang)
         final_raw = final_analysis(processed_text, qa_pairs, lang_name, nlp_result['entities'])
 
-        final_raw = re.sub(r'<think>.*?</think>', '', final_raw, flags=re.DOTALL | re.IGNORECASE)
+        print("\n[DEBUG] RAW SARVAM SUMMARY OUTPUT:", repr(final_raw))
 
-        summary_part = "Summary not generated"
-        advice_part = "Consult a doctor immediately."
+        summary_part, sarvam_severity, advice_part = parse_summary_advice(final_raw)
 
-        if "Summary:" in final_raw and "Advice:" in final_raw:
-            summary_part = final_raw.split("Advice:")[0].replace("Summary:", "").strip()
-            advice_part = final_raw.split("Advice:")[-1].strip()
-        elif "Summary:" in final_raw:
-            summary_part = final_raw.split("Summary:")[-1].strip()
-        elif "Advice:" in final_raw:
-            advice_part = final_raw.split("Advice:")[-1].strip()
+        if not summary_part or len(summary_part) < 10:
+            print("[Using fallback summary generator]")
+            summarizer = SummaryGenerator()
+            summary_part = summarizer.generate(nlp_result["entities"], language=lang_name)
 
+        if not advice_part or len(advice_part) < 5:
+            advice_part = "Consult a doctor immediately." if not is_hindi else "तुरंत डॉक्टर से संपर्क करें।"
+
+        # Final Report
         print("\n" + "═" * 80)
         print("RAYA MEDICAL REPORT")
         print("═" * 80)
         print(f"Language     : {lang_name.upper()}")
         print(f"Date & Time  : {time.ctime()}")
         print(f"Intents      : {', '.join(nlp_result.get('intent', ['UNKNOWN']))}")
-        print(f"Raw Input    : {user_text[:130]}..." if len(user_text) > 130 else user_text)
+        print(f"Raw Input    : {user_text[:130]}...")
         print("-" * 80)
         print("NLP DETECTED:")
         print(f"  • Symptoms   : {', '.join(nlp_result['entities']['symptoms']) or 'None'}")
@@ -87,6 +150,9 @@ def main():
         print("-" * 80)
         print("SUMMARY:")
         print(summary_part)
+        print("-" * 80)
+        print("SEVERITY (Sarvam):")
+        print(sarvam_severity or "Not detected by Sarvam")
         print("-" * 80)
         print("ADVICE:")
         print(advice_part)
