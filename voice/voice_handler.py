@@ -1,4 +1,3 @@
-# voice/voice_handler.py
 import time
 import speech_recognition as sr
 from Raya_Project_tts_and_stt import text_to_speech, speech_to_text

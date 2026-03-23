@@ -658,4 +658,196 @@ thank you for the advice,GENERAL_QUERY
 bahut shukriya aapki madad ke liye,GENERAL_QUERY
 i don't understand what you said,UNKNOWN
 ye kya bol raha hai samajh nahi aa raha,UNKNOWN
-this response seems wrong,UNKNOWN
+this response seems wrong,UNKNOWNs
+मुझे बुखार लग रहा है,SYMPTOM_REPORT
+मेरा शरीर बहुत गर्म लग रहा है,SYMPTOM_REPORT
+मुझे तेज बुखार है,SYMPTOM_REPORT
+सिर में तेज दर्द हो रहा है,SYMPTOM_REPORT
+मेरा सिर भारी लग रहा है,SYMPTOM_REPORT
+खांसी बार बार आ रही है,SYMPTOM_REPORT
+सांस लेने में तकलीफ हो रही है,SYMPTOM_REPORT
+पेट में तेज दर्द है,SYMPTOM_REPORT
+मुझे उल्टी जैसा महसूस हो रहा है,SYMPTOM_REPORT
+नाक बंद हो गई है,SYMPTOM_REPORT
+शरीर में कमजोरी बहुत ज्यादा है,SYMPTOM_REPORT
+चक्कर आ रहे हैं,SYMPTOM_REPORT
+सीने में दर्द हो रहा है,SYMPTOM_REPORT
+गले में खराश है,SYMPTOM_REPORT
+आंखों में जलन हो रही है,SYMPTOM_REPORT
+पीठ में दर्द है,SYMPTOM_REPORT
+कान में दर्द हो रहा है,SYMPTOM_REPORT
+बहुत थकान लग रही है,SYMPTOM_REPORT
+बुखार के साथ खांसी है,SYMPTOM_REPORT
+सिर दर्द के साथ उल्टी है,SYMPTOM_REPORT
+मुझे हल्का बुखार महसूस हो रहा है,SYMPTOM_REPORT
+शरीर गर्म हो रहा है,SYMPTOM_REPORT
+तेज सिरदर्द हो रहा है,SYMPTOM_REPORT
+खांसी नहीं रुक रही है,SYMPTOM_REPORT
+सांस फूल रही है,SYMPTOM_REPORT
+पेट दर्द से परेशान हूं,SYMPTOM_REPORT
+उल्टी आ रही है बार बार,SYMPTOM_REPORT
+नाक से पानी बह रहा है,SYMPTOM_REPORT
+कमजोरी महसूस हो रही है,SYMPTOM_REPORT
+चक्कर आ रहे हैं बार बार,SYMPTOM_REPORT
+सीने में जलन है,SYMPTOM_REPORT
+गला सूख रहा है,SYMPTOM_REPORT
+आंखें लाल हो रही हैं,SYMPTOM_REPORT
+पीठ में कमर दर्द है,SYMPTOM_REPORT
+कान बज रहे हैं,SYMPTOM_REPORT
+शरीर थका हुआ लग रहा है,SYMPTOM_REPORT
+बुखार रात से है,SYMPTOM_REPORT
+सिर में दबाव है,SYMPTOM_REPORT
+खांसी के साथ बलगम है,SYMPTOM_REPORT
+सांस लेना मुश्किल है,SYMPTOM_REPORT
+पेट में मरोड़ हो रही है,SYMPTOM_REPORT
+उल्टी के बाद कमजोरी है,SYMPTOM_REPORT
+नाक भरी हुई है,SYMPTOM_REPORT
+शरीर में दर्द है,SYMPTOM_REPORT
+चक्कर से गिरने जैसा लग रहा है,SYMPTOM_REPORT
+सीने में दबाव महसूस हो रहा है,SYMPTOM_REPORT
+गले में सूजन है,SYMPTOM_REPORT
+आंखों में धुंधला दिख रहा है,SYMPTOM_REPORT
+पीठ में तनाव है,SYMPTOM_REPORT
+कान में संक्रमण लग रहा है,SYMPTOM_REPORT
+बहुत नींद आ रही है,SYMPTOM_REPORT
+बुखार के साथ ठंड लग रही है,SYMPTOM_REPORT
+सिर घूम रहा है,SYMPTOM_REPORT
+खांसी से छाती दर्द कर रही है,SYMPTOM_REPORT
+सांस छोटी हो रही है,SYMPTOM_REPORT
+पेट फूल रहा है,SYMPTOM_REPORT
+उल्टी का मन कर रहा है,SYMPTOM_REPORT
+नाक बह रही है,SYMPTOM_REPORT
+शरीर में सुस्ती है,SYMPTOM_REPORT
+चक्कर के साथ उल्टी है,SYMPTOM_REPORT
+सीने में हल्का दर्द है,SYMPTOM_REPORT
+गला खराब हो गया है,SYMPTOM_REPORT
+आंखें सूज गई हैं,SYMPTOM_REPORT
+पीठ में मांसपेशी दर्द है,SYMPTOM_REPORT
+कान बह रहा है,SYMPTOM_REPORT
+थकान से उठने में तकलीफ है,SYMPTOM_REPORT
+बुखार सुबह से है,SYMPTOM_REPORT
+सिर में धड़कन है,SYMPTOM_REPORT
+खांसी रात भर रही,SYMPTOM_REPORT
+सांस लेने में दर्द है,SYMPTOM_REPORT
+पेट में गैस है,SYMPTOM_REPORT
+उल्टी बार बार हुई,SYMPTOM_REPORT
+नाक बंद है और सर्दी है,SYMPTOM_REPORT
+शरीर कमजोर लग रहा है,SYMPTOM_REPORT
+चक्कर आते ही बैठना पड़ता है,SYMPTOM_REPORT
+सीने में भारीपन है,SYMPTOM_REPORT
+गले में दर्द के साथ खांसी,SYMPTOM_REPORT
+आंखों में खुजली है,SYMPTOM_REPORT
+पीठ में कटाव महसूस हो रहा है,SYMPTOM_REPORT
+कान में आवाज आ रही है,SYMPTOM_REPORT
+थकान पूरे दिन है,SYMPTOM_REPORT
+मुझे डॉक्टर से अपॉइंटमेंट चाहिए,APPOINTMENT_BOOK
+कल डॉक्टर से मिलना है,APPOINTMENT_BOOK
+कार्डियोलॉजिस्ट अपॉइंटमेंट बुक करें,APPOINTMENT_BOOK
+न्यूरोलॉजिस्ट से समय चाहिए,APPOINTMENT_BOOK
+डर्मेटोलॉजिस्ट से अपॉइंटमेंट,APPOINTMENT_BOOK
+जनरल फिजिशियन से मिलना है,APPOINTMENT_BOOK
+अपॉइंटमेंट आज का चाहिए,APPOINTMENT_BOOK
+हॉस्पिटल में डॉक्टर बुक करें,APPOINTMENT_BOOK
+स्किन डॉक्टर से अपॉइंटमेंट,APPOINTMENT_BOOK
+हार्ट स्पेशलिस्ट से समय चाहिए,APPOINTMENT_BOOK
+मेरा अपॉइंटमेंट रद्द कर दें,APPOINTMENT_CANCEL
+कल का डॉक्टर का समय कैंसल करें,APPOINTMENT_CANCEL
+अपॉइंटमेंट कैंसल करना है,APPOINTMENT_CANCEL
+बुकिंग रद्द करो,APPOINTMENT_CANCEL
+डॉक्टर विजिट कैंसल करें,APPOINTMENT_CANCEL
+मेरा अपॉइंटमेंट बदलना है,APPOINTMENT_RESCHEDULE
+समय कल के लिए शिफ्ट करें,APPOINTMENT_RESCHEDULE
+अपॉइंटमेंट आगे बढ़ाएं,APPOINTMENT_RESCHEDULE
+डॉक्टर का समय बदल दो,APPOINTMENT_RESCHEDULE
+नया समय चाहिए,APPOINTMENT_RESCHEDULE
+कार्डियोलॉजी विभाग कहां है,DEPARTMENT_QUERY
+न्यूरोलॉजी विभाग कहां है,DEPARTMENT_QUERY
+डर्मेटोलॉजी कहां मिलेगी,DEPARTMENT_QUERY
+हार्ट डिपार्टमेंट कहां है,DEPARTMENT_QUERY
+जनरल मेडिसिन कहां है,DEPARTMENT_QUERY
+डॉक्टर आज उपलब्ध हैं क्या,DOCTOR_QUERY
+डॉक्टर कब आते हैं,DOCTOR_QUERY
+डॉक्टर की टाइमिंग क्या है,DOCTOR_QUERY
+आज डॉक्टर मिलेंगे,DOCTOR_QUERY
+डॉक्टर विजिटिंग आवर्स,DOCTOR_QUERY
+नमस्ते, GREETING
+हैलो, GREETING
+नमस्कार, GREETING
+कैसे हो, GREETING
+सुप्रभात, GREETING
+धन्यवाद, GENERAL_QUERY
+बहुत शुक्रिया, GENERAL_QUERY
+आपकी मदद के लिए धन्यवाद, GENERAL_QUERY
+यह समझ नहीं आया, UNKNOWN
+यह गलत लग रहा है, UNKNOWN
+कुछ गड़बड़ है, UNKNOWN
+यह क्या मतलब है, UNKNOWN
+मुझे बुखार और खांसी दोनों हैं,SYMPTOM_REPORT
+सिर दर्द के साथ चक्कर आ रहे हैं,SYMPTOM_REPORT
+पेट दर्द और उल्टी साथ में,SYMPTOM_REPORT
+सीने में दर्द और सांस फूलना,SYMPTOM_REPORT
+गले में दर्द के साथ खांसी,SYMPTOM_REPORT
+आंखों में दर्द और लालिमा,SYMPTOM_REPORT
+पीठ दर्द से चलना मुश्किल,SYMPTOM_REPORT
+कान में दर्द और बहाव,SYMPTOM_REPORT
+शरीर में दर्द और कमजोरी,SYMPTOM_REPORT
+बुखार के साथ ठंड लगना,SYMPTOM_REPORT
+सिर भारी और दबाव,SYMPTOM_REPORT
+खांसी से छाती में जलन,SYMPTOM_REPORT
+सांस में तकलीफ और दर्द,SYMPTOM_REPORT
+पेट में मरोड़ और गैस,SYMPTOM_REPORT
+उल्टी के बाद कमजोरी,SYMPTOM_REPORT
+नाक बंद और सर्दी,SYMPTOM_REPORT
+शरीर थका और सुस्त,SYMPTOM_REPORT
+चक्कर के साथ सिर घूमना,SYMPTOM_REPORT
+सीने में भारीपन और दबाव,SYMPTOM_REPORT
+गला सूखा और खराश,SYMPTOM_REPORT
+आंखें धुंधली और जलन,SYMPTOM_REPORT
+पीठ में तनाव और दर्द,SYMPTOM_REPORT
+कान बजना और दर्द,SYMPTOM_REPORT
+थकान पूरे दिन रह रही है,SYMPTOM_REPORT
+बुखार रात भर बना रहा,SYMPTOM_REPORT
+सिर में धड़कन और दर्द,SYMPTOM_REPORT
+खांसी रात में बढ़ जाती है,SYMPTOM_REPORT
+सांस लेना कठिन हो गया,SYMPTOM_REPORT
+पेट फूलने के साथ दर्द,SYMPTOM_REPORT
+उल्टी का मन बार बार,SYMPTOM_REPORT
+नाक बहना और बंद होना,SYMPTOM_REPORT
+शरीर कमजोर और दर्द,SYMPTOM_REPORT
+चक्कर आते ही बैठना पड़ता,SYMPTOM_REPORT
+सीने में हल्की जलन,SYMPTOM_REPORT
+गले में सूजन और दर्द,SYMPTOM_REPORT
+आंखों में खुजली और लाल,SYMPTOM_REPORT
+पीठ में कटाव जैसा,SYMPTOM_REPORT
+कान में आवाज और संक्रमण,SYMPTOM_REPORT
+थकान से उठना मुश्किल,SYMPTOM_REPORT
+बुखार सुबह से तेज,SYMPTOM_REPORT
+सिर में दबाव बढ़ रहा,SYMPTOM_REPORT
+खांसी के साथ बलगम आ रहा,SYMPTOM_REPORT
+सांस में दर्द और फूलना,SYMPTOM_REPORT
+पेट में गैस और मरोड़,SYMPTOM_REPORT
+उल्टी बार बार हुई आज,SYMPTOM_REPORT
+नाक भरी हुई और बहाव,SYMPTOM_REPORT
+शरीर में सुस्ती पूरे दिन,SYMPTOM_REPORT
+चक्कर के साथ उल्टी,SYMPTOM_REPORT
+सीने में भारीपन बढ़ गया,SYMPTOM_REPORT
+गले में खराश रात से,SYMPTOM_REPORT
+आंखें सूज गई और जलन,SYMPTOM_REPORT
+पीठ में मांसपेशी खिंचाव,SYMPTOM_REPORT
+कान बह रहा और दर्द,SYMPTOM_REPORT
+थकान से काम नहीं हो रहा,SYMPTOM_REPORT
+बुखार के साथ सर्दी लग रही,SYMPTOM_REPORT
+सिर घूम रहा तेजी से,SYMPTOM_REPORT
+खांसी से छाती दर्द,SYMPTOM_REPORT
+सांस छोटी और तकलीफ,SYMPTOM_REPORT
+पेट में गैस और दर्द,SYMPTOM_REPORT
+उल्टी के बाद थकान,SYMPTOM_REPORT
+नाक बंद होकर सांस लेना मुश्किल,SYMPTOM_REPORT
+शरीर दर्द और कमजोरी,SYMPTOM_REPORT
+चक्कर आना शुरू हो गया,SYMPTOM_REPORT
+सीने में दबाव महसूस,SYMPTOM_REPORT
+गला खराब और खांसी,SYMPTOM_REPORT
+आंखों में धुंध और जलन,SYMPTOM_REPORT
+पीठ में तनाव बढ़ गया,SYMPTOM_REPORT
+कान में संक्रमण लग रहा,SYMPTOM_REPORT
+थकान दिन भर रहती है,SYMPTOM_REPORT

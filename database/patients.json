@@ -756,5 +756,47 @@
         "summary": "Summary Patient experiences cold symptoms blocked nose fever since last night and seeks a general physician appointment Symptoms Severity Moderate Advice",
         "advice": "\u0924\u0941\u0930\u0902\u0924 \u0921\u0949\u0915\u094d\u091f\u0930 \u0938\u0947 \u0938\u0902\u092a\u0930\u094d\u0915 \u0915\u0930\u0947\u0902\u0964",
         "timestamp": "Sat Mar 21 15:05:14 2026"
+    },
+    {
+        "language": "hindi",
+        "raw_input": "\u092e\u0941\u091d\u0947 \u0915\u0932 \u0930\u093e\u0924 \u0938\u0947 \u0938\u093f\u0930 \u092e\u0947\u0902 \u092c\u0939\u0941\u0924 \u0926\u0930\u094d\u0926 \u0939\u094b \u0930\u0939\u093e \u0939\u0948 \u0905\u092a\u0949\u0907\u0902\u091f\u092e\u0947\u0902\u091f \u092d\u0940 \u092c\u0941\u0915 \u0915\u0930\u0928\u0940 \u0939\u0948",
+        "nlp_intents": [
+            "UNCERTAIN"
+        ],
+        "nlp_entities": {
+            "symptoms": [],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": null,
+            "duration": null,
+            "date": null,
+            "time": null,
+            "bodyPart": null
+        },
+        "qa_pairs": "\u0926\u0930\u094d\u0926 \u0915\u092c \u0938\u0947 \u0936\u0941\u0930\u0942 \u0939\u0941\u0906 \u0914\u0930 \u0915\u0939\u093e\u0901 \u0938\u091f\u0940\u0915\u0924\u093e \u0938\u0947 \u092e\u0939\u0938\u0942\u0938 \u0939\u094b \u0930\u0939\u093e \u0939\u0948 \u2192 \u0915\u0947 \u092c\u0940\u091a\u094b \u092c\u0940\u091a\n\u0915\u094d\u092f\u093e \u0906\u092a\u0915\u094b \u0924\u0928\u093e\u0935 \u092f\u093e \u0916\u093e\u0928\u092a\u093e\u0928 \u092e\u0947\u0902 \u0915\u094b\u0908 \u092c\u0926\u0932\u093e\u0935 \u092e\u0939\u0938\u0942\u0938 \u0939\u0941\u0906 \u0939\u0948 \u092a\u093f\u091b\u0932\u0947 \u0926\u093f\u0928\u094b\u0902 \u092e\u0947\u0902 \u2192 \u0928\u0939\u0940\u0902\n\u0915\u094d\u092f\u093e \u0938\u093f\u0930\u0926\u0930\u094d\u0926 \u0915\u0947 \u0938\u093e\u0925 \u092c\u0941\u0916\u093e\u0930 \u091a\u0915\u094d\u0915\u0930 \u092f\u093e \u0909\u0932\u094d\u091f\u0940 \u092d\u0940 \u0939\u094b \u0930\u0939\u0940 \u0939\u0948 \u2192 \u0939\u093e\u0902 \u092c\u0941\u0916\u093e\u0930 \u0914\u0930 \u091a\u0915\u094d\u0915\u0930 \u0906 \u0930\u0939\u0947 \u0939\u0948\u0902\n\u0915\u094d\u092f\u093e \u0926\u0930\u094d\u0926 \u0924\u0947\u091c\u093c \u0927\u0921\u093c\u0915\u0928 \u091c\u0948\u0938\u093e \u092f\u093e \u0932\u0917\u093e\u0924\u093e\u0930 \u0939\u0948 \u2192 \u0932\u0917\u093e\u0924\u093e\u0930 \u0939\u0948\n\u0906\u092a\u0928\u0947 \u0905\u092d\u0940 \u0924\u0915 \u0915\u094b\u0908 \u0926\u0935\u093e \u092f\u093e \u0909\u092a\u093e\u092f \u0906\u091c\u093c\u092e\u093e \u0932\u093f\u092f\u093e \u0939\u0948 \u2192 \u0928\u0939\u0940\u0902",
+        "summary": "Summary \u0938\u0940\u092e\u093f\u0924 \u091c\u093e\u0928\u0915\u093e\u0930\u0940 \u092e\u0947\u0902 \u0917\u0902\u092d\u0940\u0930 \u0932\u0915\u094d\u0937\u0923\u094b\u0902 \u0915\u0940 \u0938\u0902\u092d\u093e\u0935\u0928\u093e Symptoms \u0932\u0917\u093e\u0924\u093e\u0930 \u0938\u093f\u0930\u0926\u0930\u094d\u0926 \u091a\u0915\u094d\u0915\u0930 \u0908 \u0926\u0935\u093e \u0928\u0939\u0940\u0902 \u0932\u0940 Severity High Advice \u0924\u0924\u094d\u0915\u093e\u0932 \u091a\u093f\u0915\u093f\u0924\u094d\u0938\u0915\u0940\u092f \u092a\u0930\u093e\u092e\u0930\u094d\u0936 \u0932\u0947\u0902 \u0914\u0930 \u0928\u094d\u092f\u0942\u0930\u094b\u0932\u0949\u091c\u093f\u0938\u094d\u091f/\u091c\u0928\u0930\u0932 \u092b\u093f\u091c\u093f\u0936\u093f\u092f\u0928 \u0938\u0947 \u0905\u092a\u0949\u0907\u0902\u091f\u092e\u0947\u0902\u091f \u092c\u0941\u0915 \u0915\u0930\u0947\u0902",
+        "advice": "\u0924\u0941\u0930\u0902\u0924 \u0921\u0949\u0915\u094d\u091f\u0930 \u0938\u0947 \u0938\u0902\u092a\u0930\u094d\u0915 \u0915\u0930\u0947\u0902\u0964",
+        "timestamp": "Sat Mar 21 21:58:58 2026"
+    },
+    {
+        "language": "english",
+        "raw_input": "i am having a severe stomach issues since last night also feeling a bit dizzy",
+        "nlp_intents": [
+            "SYMPTOM_REPORT"
+        ],
+        "nlp_entities": {
+            "symptoms": [],
+            "negatedSymptoms": [],
+            "departments": [],
+            "severity": "severe",
+            "duration": "since last night",
+            "date": null,
+            "time": null,
+            "bodyPart": "stomach"
+        },
+        "qa_pairs": "Are you experiencing sharp pain or cramps in your stomach \u2192 yes in lower\nHave you vomited or had diarrhea since last night \u2192 no answer\nDoes the dizziness occur when you stand up suddenly \u2192 no\nAny fever or chills with the stomach issues \u2192 i am feeling\nDid the symptoms start right after eating something specific \u2192 no",
+        "summary": "Summary Severe lower abdominal pain with fever and dizziness since last night Symptoms Sharp lower abdominal cramps fever chills dizziness Severity Moderate Advice Consult a doctor immediately for evaluation especially to rule out infections or other serious conditions",
+        "advice": "Consult a doctor immediately.",
+        "timestamp": "Sat Mar 21 22:02:53 2026"
     }
 ]
